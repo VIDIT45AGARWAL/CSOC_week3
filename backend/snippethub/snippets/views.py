@@ -63,7 +63,7 @@ class GoogleAuthView(APIView):
             )
 
             
-            flow.redirect_uri = 'http://localhost:5173'
+            flow.redirect_uri = settings.GOOGLE_REDIRECT_URI
 
             
             flow.fetch_token(code=code)

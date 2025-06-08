@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const API_URL = 'http://localhost:8000/api'
-  const GOOGLE_CLIENT_ID = '985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com'
+  const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID
 
   
   useEffect(() => {

@@ -28,7 +28,7 @@ const App = () => {
 
 
   return (
-  <GoogleOAuthProvider clientId="985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com">
+  <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
     <AuthProvider>
       <RouterProvider router={router}/>
     </AuthProvider>

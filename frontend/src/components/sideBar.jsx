@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
+import { useAuth } from './AuthContext'
 
 const sideBar = () => {
 
   const [starredSnippets, setStarredSnippets] =useState([])
-
+  const {user}= useAuth()
   const API_URL= 'http://localhost:8000/api'
 
   const fetchStarredSnippets = async ()=>{
+    if(!user) return
     try{
-      const response= await axios.get(`${API_URL}/snippets/`,{
-        params: {is_starred: true}
+      const token = localStorage.getItem('access_token');
+      if (!token) return; 
+      const response = await axios.get(`${API_URL}/snippets/`, {
+        params: { is_starred: true },
+        headers: {
+          Authorization: `Bearer ${token}`, 
+        },
       })
       const filteredSnippets = response.data.filter(snippet => snippet.is_starred === true)
       setStarredSnippets(filteredSnippets)
@@ -24,21 +31,21 @@ const sideBar = () => {
     fetchStarredSnippets()
 
     const handleStarToggle = (event) => {
-      const updatedSnippet = event.detail;
+      const updatedSnippet = event.detail
       if (updatedSnippet.is_starred) {
         setStarredSnippets(prev =>
           prev.some(s => s.id === updatedSnippet.id)
             ? prev.map(s => (s.id === updatedSnippet.id ? updatedSnippet : s))
             : [...prev, updatedSnippet]
-        );
+        )
       } else {
-        setStarredSnippets(prev => prev.filter(s => s.id !== updatedSnippet.id));
+        setStarredSnippets(prev => prev.filter(s => s.id !== updatedSnippet.id))
       }
-    };
+    }
 
     window.addEventListener('snippetStarToggled', handleStarToggle);
-    return () => window.removeEventListener('snippetStarToggled', handleStarToggle);
-  },[])
+    return () => window.removeEventListener('snippetStarToggled', handleStarToggle)
+  },[user])
 
   const handleSnippetUpdate = (updatedSnippet) => {
     if (updatedSnippet.is_starred) {

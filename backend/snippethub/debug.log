@@ -1,0 +1,669 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received code: 4/0AUJR-x7aR_-BE0TGsQ7jnPaBSS-L6tEjS4Eyw9egZ8wGZ1JwLnkXaLyZf3R_O6Z1ThmQNQ
+Using redirect_uri: http://localhost:5173
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x7aR_-BE0TGsQ7jnPaBSS-L6tEjS4Eyw9egZ8wGZ1JwLnkXaLyZf3R_O6Z1ThmQNQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x79ac231218a0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x7aR_-BE0TGsQ7jnPaBSS-L6tEjS4Eyw9egZ8wGZ1JwLnkXaLyZf3R_O6Z1ThmQNQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 07:05:17 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxiLR_xAAQhEUpGCVrqz_FBozvWB9ntuv1m5Vpr4Evi5hE0k7GGZGzurNblFd_JbwYHmaUWqm5EUi_U_B6vQBnPF5_-ztTefE1xsjr7DSJDhh2Xf3ay6YlEMUxGiwvbl4w59I-uWiIP1Vvq0sZ3GO7aC-6rqC_g6Yk3VaCgYKAV0SARUSFQHGX2MiJF3NvN1TpnRlSNIzc3tIng0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0geLEfhtafNDBCgYIARAAGBASNwF-L9IrGVDUaxuCsPGRw0-ew0UxqW6_saxKHBsDMi8TEe7yEpW1HgRBEXmI0ErOjx3FdyUIhMo",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJxTDZtQWFURVc4dngtREFFaTBVQmdRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzY2MzE3LCJleHAiOjE3NDkzNjk5MTd9.MXVgHcEwMMIOEgGMbCrQfosuZ168M4zsSzYcUvH0l7NCHB3OUnxA9U4aXqpQWaP5k9IfYBNy9JpwN1ZKXG9fvA4qSI8l4hBkTDoV6Osm24xKk3blYf0telgtSL17vIBs8vncqNNajTEP7iWhhHYT8mg0UXxdCgktv7UsL-spQ3vhsf74YQsnwXRTjZ6LskrQO96_dmenQbKiLloVgJ2H6WrtmlUP_VSbCWQ83gzD2y_QR-UwGxz_FN3cpBFEFo5a-eZUnzanHyRNvGqoEK2SAMt_6qADRVw7KFDK9BoWN9KR1sdNdXnYPvcOXp-pGeIZte1NXv5EBDOS5Essf1q79Q"
+}.
+Invoking 0 token response hooks.
+Google auth error: Scope has changed from "email profile openid" to "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid".
+Traceback (most recent call last):
+  File "/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py", line 71, in post
+    flow.fetch_token(code=code)
+  File "/home/vidit/.local/lib/python3.10/site-packages/google_auth_oauthlib/flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+  File "/home/vidit/.local/lib/python3.10/site-packages/requests_oauthlib/oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/clients/base.py", line 448, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/parameters.py", line 471, in validate_token_parameters
+    raise w
+Warning: Scope has changed from "email profile openid" to "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid".
+Bad Request: /api/auth/google/
+Received code: 4/0AUJR-x5sNoKIf8lpjtalYSI9sVofqzcStUxxX_RdCgPfn7DJqx8ms-i5glNPYdel4qQRUg
+Using redirect_uri: http://localhost:5173
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5sNoKIf8lpjtalYSI9sVofqzcStUxxX_RdCgPfn7DJqx8ms-i5glNPYdel4qQRUg', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x79ac23144070>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5sNoKIf8lpjtalYSI9sVofqzcStUxxX_RdCgPfn7DJqx8ms-i5glNPYdel4qQRUg&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 07:05:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxixebl2o-A2HSQCjlWW3rGqh6R4B4aDwFFlK-L18Og3McAN0j5h6yUOBPuGIn8GFFXdw4PEVSurrUPGkoWHQa0dq6sfYuPEsLD3GEKdQQeNa-pznsRrrXkYPwdsF-lKiLN__nsZYcfkVIsV6MqIKpvHqx5oWjFnL8iSaCgYKAW8SARUSFQHGX2MiR_epAL500VktpsDxEpWuUQ0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gVWVsY1gWm9kCgYIARAAGBASNwF-L9Ir4dsU4vxJa7HNWxicAmyssaOvReqjf97mcgOSsHhvzBw0_zV8euYH6LqS1wDdMqYPMLk",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJhWWtLWVVKT0p6SDN1alNQdmJVU1BRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzY2MzQ3LCJleHAiOjE3NDkzNjk5NDd9.RO3kFgr0JBAc2_FfQv24iAQZ7a1FqbTatNPNlNfrIZbUZCBxYdhsRA1ykYMlhi5LxyGY6fGfPJjPKEUj0F1i1GBHcFDA17p9WiAaOsi50brjDanHknPNFwYYw2qyzUicGLgA625cvBg6_9yrVx8I-wRVBJs4heyD6pleLjXj7Obx9Yq9_Fp_gSP2Dx8_IQrEEArYQizSG5tiIPUmdYGE2Cxu6QAjw5tVxbbOfXg46ymJfcA6zh47sRnARoZoMPpP-v5JR_uigJz05itlCJxlE9xJmypVRRzdF9E5EA304ngAcJmXsB0fDzd6XmIPT4UdUQMofk53eyKIADca48-IQA"
+}.
+Invoking 0 token response hooks.
+Google auth error: Scope has changed from "email profile openid" to "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid".
+Traceback (most recent call last):
+  File "/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py", line 71, in post
+    flow.fetch_token(code=code)
+  File "/home/vidit/.local/lib/python3.10/site-packages/google_auth_oauthlib/flow.py", line 285, in fetch_token
+    return self.oauth2session.fetch_token(self.client_config["token_uri"], **kwargs)
+  File "/home/vidit/.local/lib/python3.10/site-packages/requests_oauthlib/oauth2_session.py", line 406, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/clients/base.py", line 448, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/parameters.py", line 441, in parse_token_response
+    validate_token_parameters(params)
+  File "/usr/lib/python3/dist-packages/oauthlib/oauth2/rfc6749/parameters.py", line 471, in validate_token_parameters
+    raise w
+Warning: Scope has changed from "email profile openid" to "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid".
+Bad Request: /api/auth/google/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Google auth error: 'Settings' object has no attribute 'GOOGLE_REDIRECT_URI'
+Bad Request: /api/auth/google/
+Google auth error: 'Settings' object has no attribute 'GOOGLE_REDIRECT_URI'
+Bad Request: /api/auth/google/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/auth/google/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5P9_AwkBGbcTg0GxcKxrIYWLsFUZs_Es0K-JRUlH_yY9gUxTj_Are_wx0bG04ZDQ', 'redirect_uri': 'http://127.0.0.1:8000/api/auth/google/'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x753956de41f0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+Request to fetch token completed with status 400.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '178', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5P9_AwkBGbcTg0GxcKxrIYWLsFUZs_Es0K-JRUlH_yY9gUxTj_Are_wx0bG04ZDQ&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fauth%2Fgoogle%2F
+Response headers were {'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 07:58:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "error": "redirect_uri_mismatch",
+  "error_description": "Bad Request"
+}.
+Invoking 0 token response hooks.
+Google auth error: (redirect_uri_mismatch) Bad Request
+Bad Request: /api/auth/google/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippethub/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x7Wxvn2Rt3C4ivyJTAW19sWFCoa4fIZAP4wB8brO81164DXiiGd_ZazjUbV-SkNuQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x78ab43a67400>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x7Wxvn2Rt3C4ivyJTAW19sWFCoa4fIZAP4wB8brO81164DXiiGd_ZazjUbV-SkNuQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Date': 'Sun, 08 Jun 2025 08:13:38 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxie9gRx4HpGMJ_1FzfqMdxhJ1-gGIwZQvK9n_hrUDtaVprzZD9KqGqp-HjbpjWfnV27IPoq4CPpyTODyXt8qGNGYzFWTOxQoBeANbUJPVm-FBKsPoYUktKDk1bJPmCwhAciep1m043Ge1kQ2QEURMxTpsm40U8nlwIpaCgYKAcASARUSFQHGX2MilpfT5CqCDk5yHWUKhOsClg0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gKjU9MuPiS9yCgYIARAAGBASNwF-L9IrxON7-6syVDd-eYCL-4GjdJ4kghQOhBaDnmE7dMmNszyaNvGoYawkk1PdmpkDRJ8rxAM",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJkR0JER1JSd1d1VGQtTWZMTlhMTTFBIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzcwNDE4LCJleHAiOjE3NDkzNzQwMTh9.qPYTY8Wo_PNCES7pUfzHcHK80vCkFpXn98vZlghJRXiJRNWSAI9KfInlm9OBnficFV_0qk53MW8MCOFueaV-7SL0ql0g8XNP_HeZL-nJHyDuLu_6YLQkV4XX3skfgCf-4e391htN2pflPobW2indW9W_xk9JYaXi3Jo2Cszjnt91my2vGEQCIII31QR40m6pjCXKT7ZDl9iCYKEeE2uyKm1dvjzVlcDVNT1hEK61egWRorx1hhVuaCcBykPFLMJ9ATi_gBtP-ea8qvzLmRuLIZ-W_e70kDLpweG4DR-ixbr0cFnpfVYvxaOV7n-GKZR5ryg3xnnM-DPXz5vW6Elg0Q"
+}.
+Invoking 0 token response hooks.
+Bad Request: /api/auth/google/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5LFzWBfKj8iLSKt0cNgVwm0t6NQn-tZGxFVP1MS6CYb5rZdnIqpny3UIPXl6jNxg', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x78ab43a67dc0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5LFzWBfKj8iLSKt0cNgVwm0t6NQn-tZGxFVP1MS6CYb5rZdnIqpny3UIPXl6jNxg&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 08:35:16 GMT', 'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxg9TSaqF9jRprDqbrLsu5zkz6qC49LCyV_hI52zKzkDfa5XZlLK6rY80Zj4AVmnADVPK1XpgTF2dHRrH83LGOjvbLWk367zbzTr0tfQ0u1qcNFNL05JaCm_8BnuGqhwr8BkX9GvK21QDx_EtBTWJtW76da66GytQEAuaCgYKAUgSARUSFQHGX2MilaWwkbsoAb2KTraNlsRgGw0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g3DeEjd4zHqVCgYIARAAGBASNwF-L9IrKPCendQv58oFd5Q7azsoi8CtLSpM8vT8Znj0SwTHDQ1IjskcFOKcK_KLhjMpneE0HlY",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJVVEFHek9SLW5SNHphSE1MdjJ0ZllnIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzcxNzE2LCJleHAiOjE3NDkzNzUzMTZ9.MgZa3JZvPxjtI4hC3kUOF0CIsYC6WMx5fdGG0pPQQRV7mE8sA6PRHOpa9cIk6mpe5M-Wj9MQeibf8Xa0HZR7vuJB4sNFbQns7i6Kzjbt-2NtrVNf0LmHTHyX_ZR9OTsgfyUi1uJ4POLvyEdSkWb2mQLmoTeKihM5hQF8yJf_MYtMIunTfFGf1iZrg1dOQWAjKbWc0sYv6uzq9aO_KtMRP9D1qGOpYzNfAlekpUB-59akfeRJciISTZuODiafMQHjVvNghiwEOZwVpMVZ3aOUCupKVjZPVs6Xcsf6437KgwCS1TPPRKVdfNaOPG9457DQVQY2_Zd00JA8mrOBBHPwDQ"
+}.
+Invoking 0 token response hooks.
+Bad Request: /api/auth/google/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x6Xczy8v02EC9BudUaK7gQrml-g5PfSOHBAE55wnkPyw5Yr0FgiTfdLQBwvAdTnDA', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x78ab43c17130>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x6Xczy8v02EC9BudUaK7gQrml-g5PfSOHBAE55wnkPyw5Yr0FgiTfdLQBwvAdTnDA&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 08:47:31 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxhc9iNKYzEeIg3JOX-YWAlOPHTAj1xBSYoFAsG1rDDXvH_-vmXWnhPR_jUiMSEGwOHdIP0UXsua7A42PaLkHJxMwoYjVCKsGDe37cSqr9LKbPu0BA0WnS3FcjyNNcma5_GYXmUK5sHJewzIvvvX1FJMeDQp3scUhki-aCgYKAUsSARUSFQHGX2MigKpMyJaThy9tEo9AkWNYsQ0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gw9zERxD36j6CgYIARAAGBASNwF-L9IrXRHCAP9sK7C7YYp5Owevd5AbX4oXbgpu0Ls9fGQBeyS0nOhkFv6M_v9iLFo7IE2W_os",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJzZnBBcDlmMXg0MmpCRzRPdFhZV193IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzcyNDUxLCJleHAiOjE3NDkzNzYwNTF9.F9Bx1g4i6pqNuBYcyOoJNRNbA0DuivBBMlc730tp9Kh3jxzdVfq9qpRY6Tg7FT93MEnM3zjafYL3rYacDnDqSeeA25Jgpm0QAeMfMCCKLgoE1fEDkJcJZN5nb5NsCxZESPEMmoYsawM1scuc9sSaTSEi9DzTgsUYs6LG1LxOm6vjVyunbpvplPaKneE0Jonq6q8pAlsO8XL8Pdb950tg1X7gJ6Zof-ZIFdd2pkHE0SPM-uvzjUC2rH30HoTJrSkQKDPVjHEC5NNzkgE530yK-p-yzaxKg3VB865cE053W_QCyFgGK4bFQIealvqGzLWI1BDfmfOChLz4QGaSxuXSRA"
+}.
+Invoking 0 token response hooks.
+Bad Request: /api/auth/google/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x7s3emAG9-cpQXnpHqJRZ6DL2qABUmWyvB4r6yGCGMrzgllzrs2v4StrqH24TTUvA', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x78ab43c15ba0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x7s3emAG9-cpQXnpHqJRZ6DL2qABUmWyvB4r6yGCGMrzgllzrs2v4StrqH24TTUvA&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 09:05:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxhQq2PKHx4_gTZscUuarOqU89HUu0H_EYhCLx4WzDDl8D-QJZDbMgWgzomyjN_M0TXwrSCISzCzt9_506Qkqi8951vY8p7APlyvU2WU_vhG8MA9d6pQvm56elD0EWJRJ-E71gbcl4fyntiqrQY4_0rM2IcVcjYb5Z1qaCgYKATISARUSFQHGX2Miha45J706-bOS3ymIB95y1g0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gxycw7IHxSZKCgYIARAAGBASNwF-L9IrklkpcUaCpCr8zu37GI8VovMAWuWAcOoN9DB3azcjqNIAhBoAIutzLOtXBhCzZ8F3WWI",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJWQ29zdUNHVW9ycmZNOW01bkEwRVlRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzczNTM3LCJleHAiOjE3NDkzNzcxMzd9.QTPBiGBRLaqXx8jrNYw58ACPGRKol3W2V7IKr9HgKPxv0s3WYuggIPnobbDKGuN5Mnq3q3xHtHhIGR2-XVKEts6EsZQILKMQmzoQ9EgRj8K1Ib9PjUTJG2yLb4gLVUrukb_63NNDDdWE0CTYuOzEgFihsnkwjtGll1PiJg9fJsQGGBEY_ZDVKZISqN2ab9ZtnYQbfswj3UYXStod_rBFErjW5EWYPtuZT8bqbkL5TPSMYVZTswcWsp0gbyiKMEIhMNgfvihC4Ynf9O0JuBvFjZxdbNy5_taUtD372uvh9LU5Ns47MEszPGeLN6fsyrD9L9Jh4RlFtqAM850IQMmhXQ"
+}.
+Invoking 0 token response hooks.
+Bad Request: /api/auth/google/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5loJGkn4ru5E4t1Zrkn8OJxflKwk4wuc7aEqCYumlyZ5ddFjsV1ry3DlTlZniVDw', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x764584338820>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5loJGkn4ru5E4t1Zrkn8OJxflKwk4wuc7aEqCYumlyZ5ddFjsV1ry3DlTlZniVDw&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 09:42:27 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxgje31nsR1Euotsf89pVVqqkAtPdUEj-8cWgZEeL4SehetKiAmHyhLzATTqdIH5GCOF_mU3fSOQW8CoIJq6sH23G3jH7BaYTiOeeQmaIo2u8uMGhrqQ_d1onk_c23nv9-jv68qt9tPv16uT0uVOU1DqUTVjtqCcadQEaCgYKAfESARUSFQHGX2Mi4T4HL0Xu-cOZ0qazKQ0htw0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gH5x-nHjQFvbCgYIARAAGBASNwF-L9IrXqYko18aaD-uSvxM3_mj-rNbzl_0DPYxsSDtYu_tMmTpoHsx0SkawBVyJs9c4cBfLvI",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJNVnpUd2J3THdpbEZvS0k5a09Sb1BRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzc1NzQ3LCJleHAiOjE3NDkzNzkzNDd9.Ua-cQePxufEXF6wk6_cKWTtkdGV8z8_6TYK8KqoGWcS7L-TtbE7IIwxwLHMrRSY61QzNu1ou7WHdmCnYbLgTmN_YiDXlxJTNIP9oAMdqIRjPQsdAZVa6dtv8CkLzYbHK-oTFanu_S5wGH3sjpSmP7KXvpJiM3dNb78bVEA9JtCkzZSg955vsbvgXIQ4d6YRpBlyD4etyzEOG_6cW3vH7A9JZU2nyFLBuuOZ8zJEJ7ntMWPuoQfC_48Zpp7MsfBgmZBVxvmipodW_2KQPucIGz1A1X6gFKbIme76Xmrx0_s7SOIgWIrk-eiINsYnh4zxiwblEnyVe0mmFlo-9uay4wg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxgje31nsR1Euotsf89pVVqqkAtPdUEj-8cWgZEeL4SehetKiAmHyhLzATTqdIH5GCOF_mU3fSOQW8CoIJq6sH23G3jH7BaYTiOeeQmaIo2u8uMGhrqQ_d1onk_c23nv9-jv68qt9tPv16uT0uVOU1DqUTVjtqCcadQEaCgYKAfESARUSFQHGX2Mi4T4HL0Xu-cOZ0qazKQ0htw0175', 'expires_in': 3599, 'refresh_token': '1//0gH5x-nHjQFvbCgYIARAAGBASNwF-L9IrXqYko18aaD-uSvxM3_mj-rNbzl_0DPYxsSDtYu_tMmTpoHsx0SkawBVyJs9c4cBfLvI', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJNVnpUd2J3THdpbEZvS0k5a09Sb1BRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzc1NzQ3LCJleHAiOjE3NDkzNzkzNDd9.Ua-cQePxufEXF6wk6_cKWTtkdGV8z8_6TYK8KqoGWcS7L-TtbE7IIwxwLHMrRSY61QzNu1ou7WHdmCnYbLgTmN_YiDXlxJTNIP9oAMdqIRjPQsdAZVa6dtv8CkLzYbHK-oTFanu_S5wGH3sjpSmP7KXvpJiM3dNb78bVEA9JtCkzZSg955vsbvgXIQ4d6YRpBlyD4etyzEOG_6cW3vH7A9JZU2nyFLBuuOZ8zJEJ7ntMWPuoQfC_48Zpp7MsfBgmZBVxvmipodW_2KQPucIGz1A1X6gFKbIme76Xmrx0_s7SOIgWIrk-eiINsYnh4zxiwblEnyVe0mmFlo-9uay4wg', 'expires_at': 1749379346.8914738}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1571
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5bKGt32GZtbdCFVqiuBoUzShrpRkxd0rcp90m-WzAmMO49e0iLR0oK5TWF7Da6Cw', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x7645844286d0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5bKGt32GZtbdCFVqiuBoUzShrpRkxd0rcp90m-WzAmMO49e0iLR0oK5TWF7Da6Cw&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Date': 'Sun, 08 Jun 2025 09:44:57 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxiYF3O5tMK2M7pOX4MGzZT0CiIw2eaEnYwK1OHguxHyu42jfCd1cUUYRZZqxuPnQNXfhagYRe0sAqQ5gA-rjUDnlU7_gVQEFM8OXuLkOWyzORC3nKTFAtTKKGLJnZW--Qz_9J4HpzTvV3KqPQhJQvX_fQPsAEYpp1EVaCgYKAW8SARUSFQHGX2MiUPxwnQIYLb88J_5YEHBqRA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gohg_KPEqn5HCgYIARAAGBASNwF-L9IrQ1OtYflRLFFFsoknCbiStaDXlcMSfBp5zLxj5HS_xDeuT8hbikh4m9FRSCrwPZHWtBQ",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJtSFBkaFJDMm9vbzJ5amlQUG8yRWJnIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzc1ODk3LCJleHAiOjE3NDkzNzk0OTd9.lSimBImR1T6sMjSNGn_ISH3OJvSt0V1p5ndQG26YK9HShOeaKZejdhfqeS4m3JbEv4JY3GOIF5P4fng0_8Ei5PxaQfyWdTASQap0e_9wZtByAhEw0kIPH295jWwn6mRcm8EWe-EvOUgctWZCuXH9uC4qXOL4cOGF3S_EE8sjAz1zEz-jBZBpizYugRHFvsYg4adNaDU6Xq2UmOqZjoqWsnjOK-tTVS8e32N7AGpMxPO5dly3cgAShpcFCBE3ZRpNOxtPo2_VYiPcug0EjEUROSR8-KCj3xhGhrs4ae2GvpyanyUhs4Kbjn0TsQbkSm4xzqYp25nvcXgnSw1IV8wQow"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxiYF3O5tMK2M7pOX4MGzZT0CiIw2eaEnYwK1OHguxHyu42jfCd1cUUYRZZqxuPnQNXfhagYRe0sAqQ5gA-rjUDnlU7_gVQEFM8OXuLkOWyzORC3nKTFAtTKKGLJnZW--Qz_9J4HpzTvV3KqPQhJQvX_fQPsAEYpp1EVaCgYKAW8SARUSFQHGX2MiUPxwnQIYLb88J_5YEHBqRA0175', 'expires_in': 3599, 'refresh_token': '1//0gohg_KPEqn5HCgYIARAAGBASNwF-L9IrQ1OtYflRLFFFsoknCbiStaDXlcMSfBp5zLxj5HS_xDeuT8hbikh4m9FRSCrwPZHWtBQ', 'scope': ['https://www.googleapis.com/auth/userinfo.profile', 'openid', 'https://www.googleapis.com/auth/userinfo.email'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJtSFBkaFJDMm9vbzJ5amlQUG8yRWJnIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzc1ODk3LCJleHAiOjE3NDkzNzk0OTd9.lSimBImR1T6sMjSNGn_ISH3OJvSt0V1p5ndQG26YK9HShOeaKZejdhfqeS4m3JbEv4JY3GOIF5P4fng0_8Ei5PxaQfyWdTASQap0e_9wZtByAhEw0kIPH295jWwn6mRcm8EWe-EvOUgctWZCuXH9uC4qXOL4cOGF3S_EE8sjAz1zEz-jBZBpizYugRHFvsYg4adNaDU6Xq2UmOqZjoqWsnjOK-tTVS8e32N7AGpMxPO5dly3cgAShpcFCBE3ZRpNOxtPo2_VYiPcug0EjEUROSR8-KCj3xhGhrs4ae2GvpyanyUhs4Kbjn0TsQbkSm4xzqYp25nvcXgnSw1IV8wQow', 'expires_at': 1749379496.7789583}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x4GBmy6N93_JqQ8_WKu5T3uN0ajizB-0AWVm5SoOSQZlJAGCeEgo0giYsG6qoEGsQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee633c820>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x4GBmy6N93_JqQ8_WKu5T3uN0ajizB-0AWVm5SoOSQZlJAGCeEgo0giYsG6qoEGsQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 11:30:43 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxj62zRUcBVEJX3vohAULG4P4akPAyphhWsSywkcwZaR7alqJJHCvvLrAYy3oHi9VptZ7FAGHL6XWq5xgSxDl_Wxur7nc49Bwi8C8eNMr-TzK-v3aghPe6kdfIGlUQSicNUzOUdgXAWYhHv3CNcGhNPc0I4WnAZmJb7xaCgYKAVoSARUSFQHGX2Mi9K3_gP8Z0XCRsgiGwnfUAQ0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g0nUlbBngsRmCgYIARAAGBASNwF-L9IrVvafj4GSoZbIo8C-FygEUxfv9gNe6a0Fw6N_ZevflS1FOZdvMZ68bxChiyJXu2zJz0A",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJBQ2VCTDl1MDNnUnR6MlRWTWlhSnJ3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyMjQzLCJleHAiOjE3NDkzODU4NDN9.iAMF1O0GjiOB5aye1_PlrDhd6iApax65nboQn75YgXmdIJZUwumQN2I3iQkLYNzOFROLAjhKjYWUDiMxb1uHB9A1GKrb3DWJMb99p3EH4T4oVyyvpZe6VLx8tM4tVVjN_ilSZO_NcfQReS7Iqhvneh0-RnueRWaraKYfD0L7Krrwlv9L6TEWQBBQohcHrU0OcUwgcK4pC7cxWtZVcKQc8GiSRCi1qC5970dB1dB3zcuoy_W1O2W-zNTEr1c7kvqt2XG9DxhC73-mkF6hB_RjPTCTzMDQuGKcsiwh83eqRhNNzGt8fNg2b2ZDZ72uybs9FqzjUBmLpqLaOqZf3aTptw"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxj62zRUcBVEJX3vohAULG4P4akPAyphhWsSywkcwZaR7alqJJHCvvLrAYy3oHi9VptZ7FAGHL6XWq5xgSxDl_Wxur7nc49Bwi8C8eNMr-TzK-v3aghPe6kdfIGlUQSicNUzOUdgXAWYhHv3CNcGhNPc0I4WnAZmJb7xaCgYKAVoSARUSFQHGX2Mi9K3_gP8Z0XCRsgiGwnfUAQ0175', 'expires_in': 3599, 'refresh_token': '1//0g0nUlbBngsRmCgYIARAAGBASNwF-L9IrVvafj4GSoZbIo8C-FygEUxfv9gNe6a0Fw6N_ZevflS1FOZdvMZ68bxChiyJXu2zJz0A', 'scope': ['https://www.googleapis.com/auth/userinfo.profile', 'openid', 'https://www.googleapis.com/auth/userinfo.email'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJBQ2VCTDl1MDNnUnR6MlRWTWlhSnJ3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyMjQzLCJleHAiOjE3NDkzODU4NDN9.iAMF1O0GjiOB5aye1_PlrDhd6iApax65nboQn75YgXmdIJZUwumQN2I3iQkLYNzOFROLAjhKjYWUDiMxb1uHB9A1GKrb3DWJMb99p3EH4T4oVyyvpZe6VLx8tM4tVVjN_ilSZO_NcfQReS7Iqhvneh0-RnueRWaraKYfD0L7Krrwlv9L6TEWQBBQohcHrU0OcUwgcK4pC7cxWtZVcKQc8GiSRCi1qC5970dB1dB3zcuoy_W1O2W-zNTEr1c7kvqt2XG9DxhC73-mkF6hB_RjPTCTzMDQuGKcsiwh83eqRhNNzGt8fNg2b2ZDZ72uybs9FqzjUBmLpqLaOqZf3aTptw', 'expires_at': 1749385842.5840092}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1571
+Creating snippet with data: {'title': 'testing', 'content': 'test', 'category': 'NOTES', 'language': 'c', 'is_public': False, 'is_starred': False}
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5xRJ2aQZcqhWCwKcTPPxLfogSWaVmbOw0hZYy7xcQUTCblziEuuk3KQTa4x7aVpw', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee641ea40>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5xRJ2aQZcqhWCwKcTPPxLfogSWaVmbOw0hZYy7xcQUTCblziEuuk3KQTa4x7aVpw&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Date': 'Sun, 08 Jun 2025 11:31:52 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxgLJ7VGmRni5Qc4A-h6ihru70N6jT_LeO5VkkQU7EtU__Ix5jYuucetE3_jqSM5qHzGeuMZV0tM3MrABp1ECVIP4v0l1HbbSNYLQ4c7-5cvtEILfKwqi-V7Mw18N6jPqBJxeVHzXCnbL1E70PU-qjjtf2whHt4lH1-9aCgYKAdASARUSFQHGX2MiRM1NaOIUmTXPuqz6rgOZYg0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g02shEAvQOEWCgYIARAAGBASNwF-L9Iryco2_yPgydOmw1ZN37YmoZ8sc3_VZg56YLzMe5BneaHgqIlcLVWIvUaik14OoMIyDyg",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJfM2RZWkZQOHFUY3NPUFp1amF0UERBIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyMzEyLCJleHAiOjE3NDkzODU5MTJ9.TPoxS-LgakfK_c36lTS6hpE1ECqQ1u3q_y7qZbFdY4Q-wdVd2eaiVgfwtPpLlvMrbNITdj0nQlshzTjR7TQmmyJJPDyysw1TiBsq1P56jnthS9lVqsAWF_H26Qi8Ne3L7BFGihOF2huGpi75vE2BV4Gsnpwkgg9NxiUZE-ZX8eG47-UcWFWR63G-RQTu5wnf5U3DNty5m4P57OQzEXl2dnP2Cjs8l6YpP9gVNNRikHWTo0Y0kk2EMMKu-hgngX8opkb80kbVibUTG6pAMPi9fwLQp7KajlyTreKblqNf-RaKxnxr76WLQ_zEjQA3HtdYzebqm5RkAigSSby5UyiF9w"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxgLJ7VGmRni5Qc4A-h6ihru70N6jT_LeO5VkkQU7EtU__Ix5jYuucetE3_jqSM5qHzGeuMZV0tM3MrABp1ECVIP4v0l1HbbSNYLQ4c7-5cvtEILfKwqi-V7Mw18N6jPqBJxeVHzXCnbL1E70PU-qjjtf2whHt4lH1-9aCgYKAdASARUSFQHGX2MiRM1NaOIUmTXPuqz6rgOZYg0175', 'expires_in': 3599, 'refresh_token': '1//0g02shEAvQOEWCgYIARAAGBASNwF-L9Iryco2_yPgydOmw1ZN37YmoZ8sc3_VZg56YLzMe5BneaHgqIlcLVWIvUaik14OoMIyDyg', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJfM2RZWkZQOHFUY3NPUFp1amF0UERBIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyMzEyLCJleHAiOjE3NDkzODU5MTJ9.TPoxS-LgakfK_c36lTS6hpE1ECqQ1u3q_y7qZbFdY4Q-wdVd2eaiVgfwtPpLlvMrbNITdj0nQlshzTjR7TQmmyJJPDyysw1TiBsq1P56jnthS9lVqsAWF_H26Qi8Ne3L7BFGihOF2huGpi75vE2BV4Gsnpwkgg9NxiUZE-ZX8eG47-UcWFWR63G-RQTu5wnf5U3DNty5m4P57OQzEXl2dnP2Cjs8l6YpP9gVNNRikHWTo0Y0kk2EMMKu-hgngX8opkb80kbVibUTG6pAMPi9fwLQp7KajlyTreKblqNf-RaKxnxr76WLQ_zEjQA3HtdYzebqm5RkAigSSby5UyiF9w', 'expires_at': 1749385911.1265159}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x51hKdfpWglutElADEvST-OGRF3kXrQL-XdXthVmcjwF5khRx3JF2PFN_UOf9NIgQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee63f24d0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x51hKdfpWglutElADEvST-OGRF3kXrQL-XdXthVmcjwF5khRx3JF2PFN_UOf9NIgQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 11:33:48 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxi2rqDmDBh4atr9Orz4GJPky18ikaMILpin5dRyPbEFAuUOIXo8XRKkbjxW7Tptj4zxqZsPaCKtxiuSlVaGZz7hNvcmuYGO5fBkg_J7H8y8HwLPxQAV0AhR6py8yfT-UjCwfUMAqvAkQoHOrZHPzyTlh-k83SGDQU8OaCgYKAaYSARESFQHGX2Mib-hX1IQNc14CpRgWm3CGIA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gydC5TKgVBxvCgYIARAAGBASNwF-L9Ir2WYpBH8nUjBQR5qvvKsVX1xkqvPMfHFORJ8lbrBIMzUAinCkEDu-GGzrj-5E4YDwA30",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJFajZtLXhqTFdMN1RCRHZDd1F0dk93IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5MzgyNDI4LCJleHAiOjE3NDkzODYwMjh9.seKMPImkVZ046dwXzYAx6eQtx9WO6YDTux9PEEgupA1SMKWUYrVFv52KEboaVXPyTYmyY4pmryyoSX51flGHHmvAjfxXdhoLnQtgeIkEHg38Wp0SawgEbetcCJ_ioGgoCgm5McOW5Ei_gXzhjOYEIYsg58_ZMeObZg603iaznDVfyJnFGGcbzLEqEsm4dco2JgaLz-xR4-DMEf3jtx9e7sRMGf50XwAHmO8GT_6wVojYNlog0qMpxeYJY7ox6sNSPDkJCz5xGx9wZfSc34lY_VP6GkiCmOq5XiADNY2IO8iihTb11Er4IG2-hPEAXgqPDcRXk8qHOS_XaRXBFhIm2A"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxi2rqDmDBh4atr9Orz4GJPky18ikaMILpin5dRyPbEFAuUOIXo8XRKkbjxW7Tptj4zxqZsPaCKtxiuSlVaGZz7hNvcmuYGO5fBkg_J7H8y8HwLPxQAV0AhR6py8yfT-UjCwfUMAqvAkQoHOrZHPzyTlh-k83SGDQU8OaCgYKAaYSARESFQHGX2Mib-hX1IQNc14CpRgWm3CGIA0175', 'expires_in': 3599, 'refresh_token': '1//0gydC5TKgVBxvCgYIARAAGBASNwF-L9Ir2WYpBH8nUjBQR5qvvKsVX1xkqvPMfHFORJ8lbrBIMzUAinCkEDu-GGzrj-5E4YDwA30', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJFajZtLXhqTFdMN1RCRHZDd1F0dk93IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5MzgyNDI4LCJleHAiOjE3NDkzODYwMjh9.seKMPImkVZ046dwXzYAx6eQtx9WO6YDTux9PEEgupA1SMKWUYrVFv52KEboaVXPyTYmyY4pmryyoSX51flGHHmvAjfxXdhoLnQtgeIkEHg38Wp0SawgEbetcCJ_ioGgoCgm5McOW5Ei_gXzhjOYEIYsg58_ZMeObZg603iaznDVfyJnFGGcbzLEqEsm4dco2JgaLz-xR4-DMEf3jtx9e7sRMGf50XwAHmO8GT_6wVojYNlog0qMpxeYJY7ox6sNSPDkJCz5xGx9wZfSc34lY_VP6GkiCmOq5XiADNY2IO8iihTb11Er4IG2-hPEAXgqPDcRXk8qHOS_XaRXBFhIm2A', 'expires_at': 1749386027.092678}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Creating snippet with data: {'title': 'test code', 'content': "from django.urls import path, include\r\nfrom rest_framework.routers import DefaultRouter\r\nfrom .views import SnippetViewSet, GoogleAuthView\r\n\r\nrouter = DefaultRouter()\r\nrouter.register(r'snippets', SnippetViewSet)\r\n\r\nurlpatterns = [\r\n    path('', include(router.urls)),\r\n    path('auth/google/', GoogleAuthView.as_view(), name='google-auth'),\r\n]", 'category': 'CODE', 'language': 'python', 'is_public': False, 'is_starred': False}
+Creating snippet with data: {'title': 'fdfd', 'content': 'fdfd', 'category': 'NOTES', 'language': 'c', 'is_public': False, 'is_starred': False}
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5J6d_PdWfWQUCjwHg-w1erJv2KJyxhrUNRuKV4sH31YRBQrdo9I4Bgw9-v70YcaA', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee63f32e0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5J6d_PdWfWQUCjwHg-w1erJv2KJyxhrUNRuKV4sH31YRBQrdo9I4Bgw9-v70YcaA&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Sun, 08 Jun 2025 11:34:53 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxj1xB0baTW_9EWdgyQpBNlZZrhUl2i4GABEHLwv8Z7V1Ggw1tmYXf0-sX4RnVWpThQlU6dZJqFAQqQK09rxMKF9cMG0AyKR42-NwYmGGDzQ0--U_LTGFd6pGadsmWf2vXijQYHfUmKI7HehN-PTqs01Ba6gdDXE34d2aCgYKAYsSARUSFQHGX2Mi5yE7J2yRzoVnjnHFQr5AaA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gFj7QhLvPXLDCgYIARAAGBASNwF-L9IrmM9iSDfKSKKDhjmrYdg7WWqkxLKOObNsBrWFNtaiAaH6ZoW2_b4sM2W35rkI9k9zpVg",
+  "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJMREl5WUdhX1Nya01rLWNlQ2JnS093IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyNDkzLCJleHAiOjE3NDkzODYwOTN9.RVOrR2kG_Zf85KdhVvnB4rktVfCCgdaxHoCCE8BUykVFqbvAGltq84nnDybHel8701JQu0jYefMqQZVF9ahlWR8drfutrF56KOMrnA32Guf09m5U5DUTYxrDoR7nWG4IlVjZC3j9I4J9mJB6WM0joWvZY77Zvq-W5v3goX3y4PGVhSTOCgleVXZcPd7vZYSuBvWbTQjbIfBpGCb7UnphgseHaX85h111oM6nkhvC4nFByIzscjed7-x_JoPJQ-zZslp39NYUQFIavV-UIOf-UTk2fbVuDJ0GnGQvcn-VqP8TF3Dcy460l9RYP1kcoxt9LemhPLgKLPnaTVjNdH2vYg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxj1xB0baTW_9EWdgyQpBNlZZrhUl2i4GABEHLwv8Z7V1Ggw1tmYXf0-sX4RnVWpThQlU6dZJqFAQqQK09rxMKF9cMG0AyKR42-NwYmGGDzQ0--U_LTGFd6pGadsmWf2vXijQYHfUmKI7HehN-PTqs01Ba6gdDXE34d2aCgYKAYsSARUSFQHGX2Mi5yE7J2yRzoVnjnHFQr5AaA0175', 'expires_in': 3599, 'refresh_token': '1//0gFj7QhLvPXLDCgYIARAAGBASNwF-L9IrmM9iSDfKSKKDhjmrYdg7WWqkxLKOObNsBrWFNtaiAaH6ZoW2_b4sM2W35rkI9k9zpVg', 'scope': ['openid', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJMREl5WUdhX1Nya01rLWNlQ2JnS093IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgyNDkzLCJleHAiOjE3NDkzODYwOTN9.RVOrR2kG_Zf85KdhVvnB4rktVfCCgdaxHoCCE8BUykVFqbvAGltq84nnDybHel8701JQu0jYefMqQZVF9ahlWR8drfutrF56KOMrnA32Guf09m5U5DUTYxrDoR7nWG4IlVjZC3j9I4J9mJB6WM0joWvZY77Zvq-W5v3goX3y4PGVhSTOCgleVXZcPd7vZYSuBvWbTQjbIfBpGCb7UnphgseHaX85h111oM6nkhvC4nFByIzscjed7-x_JoPJQ-zZslp39NYUQFIavV-UIOf-UTk2fbVuDJ0GnGQvcn-VqP8TF3Dcy460l9RYP1kcoxt9LemhPLgKLPnaTVjNdH2vYg', 'expires_at': 1749386092.6166868}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/1/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x55TPsfr6glqHCV7ah4sIxuZxHL66F6BhyHfSnbmyymfuRgFHJfpKSylbPQ-poweg', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee641c340>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x55TPsfr6glqHCV7ah4sIxuZxHL66F6BhyHfSnbmyymfuRgFHJfpKSylbPQ-poweg&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Date': 'Sun, 08 Jun 2025 11:44:47 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxixhMxTyK026ymy7--dk1_C16lzTpP1idtrv_wzPQu2mpWQ9dWcHscC3-iO45IglSUk1a5aai4t5l7Wa4Nu4rzGerq7JWNw3j8syOZ23S_jz0NrQ1iiQRRMb3vN36Qs7tQroMykgJKrUvUjO-usY-3wtn52cJIlwxdFaCgYKAUoSARUSFQHGX2Miafua-VPiLZQX7-P2I6g7cA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gcmfOw37hL6iCgYIARAAGBASNwF-L9IrChgK7uT8Lol-CD4EoxmRs3AY2hne-LJACJFyR1_M2mxeOL1Nd5uLDGWkIBcPx34zIPM",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJOVWhkdTZ4LVQ1RmIweDlQdG9ZZVlRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgzMDg3LCJleHAiOjE3NDkzODY2ODd9.cUIcK894LizJYfTF5cn5I4LSspcK_GeXWh5qp0aJxTg1IqdO9_JPteWqOhFZN45PO0K77lQ9j7ItVsUs_8ptC350jKHGjLsIXelW2d4Kd_QlO4PudXFoMpKSMo6MTy2KAuYmNSKzpkj0iRCfWhkuNsylvmaQqmRNseFON5BW18DOzJ3Rwh90VdN5PK00PMzRQOTP83VacD2QNHYNYkais_zoxdXVvakp2zYEC_gTg9SFuhKg9CQfy5Z4ilMv8c1kPzBpJhjLlJL5GV7FFGp3KeYgPtAVf5jgaXEDHt6EOwDOv9A5Ht-W47LZE6_kyLfxra9SZkiQ3uU60ccvxYRZVg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxixhMxTyK026ymy7--dk1_C16lzTpP1idtrv_wzPQu2mpWQ9dWcHscC3-iO45IglSUk1a5aai4t5l7Wa4Nu4rzGerq7JWNw3j8syOZ23S_jz0NrQ1iiQRRMb3vN36Qs7tQroMykgJKrUvUjO-usY-3wtn52cJIlwxdFaCgYKAUoSARUSFQHGX2Miafua-VPiLZQX7-P2I6g7cA0175', 'expires_in': 3599, 'refresh_token': '1//0gcmfOw37hL6iCgYIARAAGBASNwF-L9IrChgK7uT8Lol-CD4EoxmRs3AY2hne-LJACJFyR1_M2mxeOL1Nd5uLDGWkIBcPx34zIPM', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJOVWhkdTZ4LVQ1RmIweDlQdG9ZZVlRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgzMDg3LCJleHAiOjE3NDkzODY2ODd9.cUIcK894LizJYfTF5cn5I4LSspcK_GeXWh5qp0aJxTg1IqdO9_JPteWqOhFZN45PO0K77lQ9j7ItVsUs_8ptC350jKHGjLsIXelW2d4Kd_QlO4PudXFoMpKSMo6MTy2KAuYmNSKzpkj0iRCfWhkuNsylvmaQqmRNseFON5BW18DOzJ3Rwh90VdN5PK00PMzRQOTP83VacD2QNHYNYkais_zoxdXVvakp2zYEC_gTg9SFuhKg9CQfy5Z4ilMv8c1kPzBpJhjLlJL5GV7FFGp3KeYgPtAVf5jgaXEDHt6EOwDOv9A5Ht-W47LZE6_kyLfxra9SZkiQ3uU60ccvxYRZVg', 'expires_at': 1749386686.5400577}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x4sXJh6gdsw3K1dVXyXDJzA6F_SIjY0_viM9AwoW16Z-k1xWKa6HrXyiyPKw56A3w', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee5056aa0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x4sXJh6gdsw3K1dVXyXDJzA6F_SIjY0_viM9AwoW16Z-k1xWKa6HrXyiyPKw56A3w&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Sun, 08 Jun 2025 11:45:13 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxgjLsDQDFEqAV-Vd5xrHRKOdb-oECJOPydyHSkLb90CROSKLN3MKGAHhdeSDD7WDDp8U_LUzbF1elJJhEWfqqZUl5Yre6NFctAIMetLDbW5RMbWfFiPfkmLZIzgZUWUcpMRQRDBHzkvXEYBh8Syse6CdwYP29_EOhVMaCgYKAWcSARUSFQHGX2Mif9DLEDEtaI1rQgN0tsk1Eg0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gRz-QVAIAyxqCgYIARAAGBASNwF-L9Ir9S27Z__7iLMNNuib3eIyOi8nGxHAwj4FwcBezPuYWixkNZumrYzf8H0v4A1zKe3Pw-4",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJWcVpQM3NjTFRiUzJrSFVPT0s5U1V3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgzMTEzLCJleHAiOjE3NDkzODY3MTN9.J-lIKzVk6kJs4REqOox1sH62T8lArOKHTKOZF83mxosM-14a2xEPGWh8255JFzb0s6-p7vpyAPchCKudnlYcg_xTdI0lV7WzSD1KNO67c8ImDH4MKNEE0Ax1PjIYx-cuJzaMiId4djg6x1WulxV-vm1V84qZL2DhMgEZc-2cbHCUVF0sm3mw5NU88n7fzLSMPrMxmFxWPU9cRq409zZb7gZ_QV2ATHnDrHSV8SbnnoN6G5mM60eEHfm0LoJVKBlHVGPNFbu9E0XQ6D1Rc4FXMwKQynzYt6W4qrcZQyoPs1EtfvQICiK5hMGP1qtWKJOl8b0dHbn-WuzEh5EYfePuew"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxgjLsDQDFEqAV-Vd5xrHRKOdb-oECJOPydyHSkLb90CROSKLN3MKGAHhdeSDD7WDDp8U_LUzbF1elJJhEWfqqZUl5Yre6NFctAIMetLDbW5RMbWfFiPfkmLZIzgZUWUcpMRQRDBHzkvXEYBh8Syse6CdwYP29_EOhVMaCgYKAWcSARUSFQHGX2Mif9DLEDEtaI1rQgN0tsk1Eg0175', 'expires_in': 3599, 'refresh_token': '1//0gRz-QVAIAyxqCgYIARAAGBASNwF-L9Ir9S27Z__7iLMNNuib3eIyOi8nGxHAwj4FwcBezPuYWixkNZumrYzf8H0v4A1zKe3Pw-4', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJWcVpQM3NjTFRiUzJrSFVPT0s5U1V3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5MzgzMTEzLCJleHAiOjE3NDkzODY3MTN9.J-lIKzVk6kJs4REqOox1sH62T8lArOKHTKOZF83mxosM-14a2xEPGWh8255JFzb0s6-p7vpyAPchCKudnlYcg_xTdI0lV7WzSD1KNO67c8ImDH4MKNEE0Ax1PjIYx-cuJzaMiId4djg6x1WulxV-vm1V84qZL2DhMgEZc-2cbHCUVF0sm3mw5NU88n7fzLSMPrMxmFxWPU9cRq409zZb7gZ_QV2ATHnDrHSV8SbnnoN6G5mM60eEHfm0LoJVKBlHVGPNFbu9E0XQ6D1Rc4FXMwKQynzYt6W4qrcZQyoPs1EtfvQICiK5hMGP1qtWKJOl8b0dHbn-WuzEh5EYfePuew', 'expires_at': 1749386712.9652245}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1571
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x6K94-AkI3sJWsXVyZErMAlnj9HPi_vSkwh40C68q4D77KvlqEvxKeYzLWmynhWmA', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee502d1b0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x6K94-AkI3sJWsXVyZErMAlnj9HPi_vSkwh40C68q4D77KvlqEvxKeYzLWmynhWmA&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Date': 'Sun, 08 Jun 2025 12:08:46 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxjCGdIWKPmCbYDAryyu-OblirdCOkWEeRqiAO763_s5e28UQvoCdJ2-ZzgGLGjpjUkX6heonDU2LaoKrAj9dqRt-k1oSXXSYwqoa-zBKRKlB9_Znm7oJjXYarJkhe6OaPy1m3vaNgagm7o3Sm3bnjj_8BGFrcIBnjeYaCgYKAaMSARUSFQHGX2Mi4xR0jhV_YS7qy6X78fcWBA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g13Nmr-rzdc9CgYIARAAGBASNwF-L9IrxIDmATQPjDAWKfjaR2FMgyHTymOFMvxc1d92kx6uvwmT4YoaGjkxkiB9dqChoqTHxXY",
+  "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJOVVZYcGQ1d0xWMTZjVWMwdUNTNHh3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg0NTI2LCJleHAiOjE3NDkzODgxMjZ9.WrX0_7Y3Ihn9sdMJOaZiRS-cOrX-NEcfAuikivExKviILiL1UhvwnUbCOEi7fHgcbggiW9NGTcuASeMIP8iiFfFoaq0_2VIY5iOH1c0bf9vC8LSpCNePM_yATLw0E13_4bhzpKTr-ab2YcMWKRFsWfhlQ80CNU07bjr-oqWqdQfCsTEkJ9zY57ujGP19wEDZcKWqVQ9U4oCxX1gxTM6g8GfksvvL8IDQrZ84MmmfAc0lXsOd3rf8AdOP_t5P-tHwgmV6LohrPG9NT3waAjVOwL0VS8ah2CnRbzfoZoZemCHsvuVGVeJOpNkEpEs-FMfoCB8dJicF7J7AvroM0Pg6TQ"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxjCGdIWKPmCbYDAryyu-OblirdCOkWEeRqiAO763_s5e28UQvoCdJ2-ZzgGLGjpjUkX6heonDU2LaoKrAj9dqRt-k1oSXXSYwqoa-zBKRKlB9_Znm7oJjXYarJkhe6OaPy1m3vaNgagm7o3Sm3bnjj_8BGFrcIBnjeYaCgYKAaMSARUSFQHGX2Mi4xR0jhV_YS7qy6X78fcWBA0175', 'expires_in': 3599, 'refresh_token': '1//0g13Nmr-rzdc9CgYIARAAGBASNwF-L9IrxIDmATQPjDAWKfjaR2FMgyHTymOFMvxc1d92kx6uvwmT4YoaGjkxkiB9dqChoqTHxXY', 'scope': ['openid', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJOVVZYcGQ1d0xWMTZjVWMwdUNTNHh3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg0NTI2LCJleHAiOjE3NDkzODgxMjZ9.WrX0_7Y3Ihn9sdMJOaZiRS-cOrX-NEcfAuikivExKviILiL1UhvwnUbCOEi7fHgcbggiW9NGTcuASeMIP8iiFfFoaq0_2VIY5iOH1c0bf9vC8LSpCNePM_yATLw0E13_4bhzpKTr-ab2YcMWKRFsWfhlQ80CNU07bjr-oqWqdQfCsTEkJ9zY57ujGP19wEDZcKWqVQ9U4oCxX1gxTM6g8GfksvvL8IDQrZ84MmmfAc0lXsOd3rf8AdOP_t5P-tHwgmV6LohrPG9NT3waAjVOwL0VS8ah2CnRbzfoZoZemCHsvuVGVeJOpNkEpEs-FMfoCB8dJicF7J7AvroM0Pg6TQ', 'expires_at': 1749388125.5363674}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5AFm5NmNUExN69vrkSt2qDXlZv2NEeu3zUr3dMOl3kR6NlqAr21IKnBhmcftNipA', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50a7850>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5AFm5NmNUExN69vrkSt2qDXlZv2NEeu3zUr3dMOl3kR6NlqAr21IKnBhmcftNipA&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 12:13:40 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxguGdWO4ohNA6rIWXAy2coBkYr39LW8yO-LCRpesWIdwDPI6ODBVcIibwQ4umybmAs-yVTzCePsEwYkVNK-bT3Qty_7i4_NBh1QuvCcp9gR8w7dYqzEzGE403zSBK-zp1suT12GcXzec_aVA1AK99dnXwxWMcVuv0PhaCgYKAZsSARESFQHGX2MiyB4bvnvafoGVRaQnDiu7rQ0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g8HzpW8vYtWNCgYIARAAGBASNwF-L9IrxBizK3qIyq70lS67GjCBwjdLq3-jj2POGclrWkjBDAYOrosX-UXQhiqKluSiv3n0e60",
+  "scope": "https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI1WlR3NzNGUVphY19jSlVnc0FHMWV3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg0ODIwLCJleHAiOjE3NDkzODg0MjB9.HwKOhd0ApawejhQFnwXc5o6oDceJNGzFWSTCM_cB1gD8o2hF9YLLpV1De6JR0kjdT-4q0p3cT-1MkMIgcBsuhxEBR_yM02WanMQW2jtxbBjINpemIRV2zcdK7ePVx3vLfR_J4uncjxOfXnbDLMTWgfKBeyBLmFiLqbHWBEXGukSVqGFuC202ELxbhiNlOwmPlJ-z_bPKDOIN6Pz3EKk1OAoRYq6CiWcjV8vVgTwOLtdzNONCB_wSE857lmpgdGjHjOblDYuCxCUTIWPaplHyi2mDSqeIZipQ_Bn_cTsyk3Uvppyo9qf0Bzky9k706ZqLlH5Q2jZoOPlNT8AnVzmWXQ"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxguGdWO4ohNA6rIWXAy2coBkYr39LW8yO-LCRpesWIdwDPI6ODBVcIibwQ4umybmAs-yVTzCePsEwYkVNK-bT3Qty_7i4_NBh1QuvCcp9gR8w7dYqzEzGE403zSBK-zp1suT12GcXzec_aVA1AK99dnXwxWMcVuv0PhaCgYKAZsSARESFQHGX2MiyB4bvnvafoGVRaQnDiu7rQ0175', 'expires_in': 3599, 'refresh_token': '1//0g8HzpW8vYtWNCgYIARAAGBASNwF-L9IrxBizK3qIyq70lS67GjCBwjdLq3-jj2POGclrWkjBDAYOrosX-UXQhiqKluSiv3n0e60', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'openid', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI1WlR3NzNGUVphY19jSlVnc0FHMWV3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg0ODIwLCJleHAiOjE3NDkzODg0MjB9.HwKOhd0ApawejhQFnwXc5o6oDceJNGzFWSTCM_cB1gD8o2hF9YLLpV1De6JR0kjdT-4q0p3cT-1MkMIgcBsuhxEBR_yM02WanMQW2jtxbBjINpemIRV2zcdK7ePVx3vLfR_J4uncjxOfXnbDLMTWgfKBeyBLmFiLqbHWBEXGukSVqGFuC202ELxbhiNlOwmPlJ-z_bPKDOIN6Pz3EKk1OAoRYq6CiWcjV8vVgTwOLtdzNONCB_wSE857lmpgdGjHjOblDYuCxCUTIWPaplHyi2mDSqeIZipQ_Bn_cTsyk3Uvppyo9qf0Bzky9k706ZqLlH5Q2jZoOPlNT8AnVzmWXQ', 'expires_at': 1749388419.6831467}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Creating snippet with data: {'title': 'test2', 'content': 'fdgd dgd gd gd  gd d dd', 'category': 'NOTES', 'language': 'c', 'is_public': False, 'is_starred': False}
+Not Found: /api/snippets/4/
+Creating snippet with data: {'title': 'dsds', 'content': 'dsdsd', 'category': 'NOTES', 'language': 'c', 'is_public': False, 'is_starred': False}
+Unauthorized: /api/snippets/2/
+Unauthorized: /api/snippets/2/
+Unauthorized: /api/snippets/2/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x46Z_lOeiciiLCLtN5pScFmwxdZkSCiZTSsm6vPlB1LrBN04qeE6XSVK3vqe8bLwQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50c0430>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x46Z_lOeiciiLCLtN5pScFmwxdZkSCiZTSsm6vPlB1LrBN04qeE6XSVK3vqe8bLwQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Sun, 08 Jun 2025 12:24:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxh_uzfbdXsJU5IBJEz8LPF3d-jnJvq8LIy8tYub87DqNHXBuKsNMo4_XeLDTX2JxxA-341lsXwTnGlZfIXvmyb5Wq2Ec3K-DKeNWKcJIaZV1n7y-T-8y55NFllb1r3X6TZk_jAqfCDVgKFTexK1U3uF5Jj4kCUYyrnKaCgYKAV0SARESFQHGX2Mik6wKqAs8-2D8IH2zPNha_w0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gTkVQ586yFevCgYIARAAGBASNwF-L9IrBbdTRTFQxTbn4I6bI3CPlmL3Oj6nd4e6-qaVQmAd7PJoXLk0AHEaH84j-iMydm7Htgs",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJvUFRLcFl5TGJRQWo4blRLS3JFX05RIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg1NDk4LCJleHAiOjE3NDkzODkwOTh9.qXsxV_YoQvIwfVS_vCRueMYtJH1hnx2OPnHMvT7Ot6zSO3XxAkqRLopElP9WcYAn8efYLJzbx9V91qdgeclN_FzuZLfzFL_dEWCIdEKQK_WMMjcQ71qi1HPrSCnMUTYyDuzHxp_WKMnkiZKrNt_kW_rcvUdevWXTjBBYozlpsuVxL4obOGghPX-RWMrz1Ckm0y5mEzYpq65Ta72ENoNgragczV-ycVbwohLa-eWLTSIUF3BGbIlHNL1BfwExQMIYYU1i_62gZsIyxaGfVH6DzizjzfG3RIxHr7qGEHtsJFCxwJv0Mfcc8wOxsIWVL_YZfMPhjIwXH6bvuvNFOUTnmg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxh_uzfbdXsJU5IBJEz8LPF3d-jnJvq8LIy8tYub87DqNHXBuKsNMo4_XeLDTX2JxxA-341lsXwTnGlZfIXvmyb5Wq2Ec3K-DKeNWKcJIaZV1n7y-T-8y55NFllb1r3X6TZk_jAqfCDVgKFTexK1U3uF5Jj4kCUYyrnKaCgYKAV0SARESFQHGX2Mik6wKqAs8-2D8IH2zPNha_w0175', 'expires_in': 3599, 'refresh_token': '1//0gTkVQ586yFevCgYIARAAGBASNwF-L9IrBbdTRTFQxTbn4I6bI3CPlmL3Oj6nd4e6-qaVQmAd7PJoXLk0AHEaH84j-iMydm7Htgs', 'scope': ['https://www.googleapis.com/auth/userinfo.profile', 'openid', 'https://www.googleapis.com/auth/userinfo.email'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJvUFRLcFl5TGJRQWo4blRLS3JFX05RIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg1NDk4LCJleHAiOjE3NDkzODkwOTh9.qXsxV_YoQvIwfVS_vCRueMYtJH1hnx2OPnHMvT7Ot6zSO3XxAkqRLopElP9WcYAn8efYLJzbx9V91qdgeclN_FzuZLfzFL_dEWCIdEKQK_WMMjcQ71qi1HPrSCnMUTYyDuzHxp_WKMnkiZKrNt_kW_rcvUdevWXTjBBYozlpsuVxL4obOGghPX-RWMrz1Ckm0y5mEzYpq65Ta72ENoNgragczV-ycVbwohLa-eWLTSIUF3BGbIlHNL1BfwExQMIYYU1i_62gZsIyxaGfVH6DzizjzfG3RIxHr7qGEHtsJFCxwJv0Mfcc8wOxsIWVL_YZfMPhjIwXH6bvuvNFOUTnmg', 'expires_at': 1749389097.092538}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1571
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x6X-Uz142CI3tHz-BUZsD4V6BF9tnTmypfPJ21nMmhNzu198698lfDWxaTUZTf8ig', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50a5120>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x6X-Uz142CI3tHz-BUZsD4V6BF9tnTmypfPJ21nMmhNzu198698lfDWxaTUZTf8ig&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Date': 'Sun, 08 Jun 2025 12:43:16 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxhxkiaBb5qL0neoJJkVR2n3VNSiGCqv605XLASX2iFnUDo-mii9BKOKgCYR3QMQuLwiJL7HBlq5yew2WjuR0aHMUkq2b06jm96hzVn2fwnEMumieRTGM9V9L5mudWgQRFiPXf7Jz6wNOIweDfYiFF6J8smwnfRqLyjEaCgYKAcUSARUSFQHGX2Min9Os97xQ7vTLxJRjPXPiGg0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g1p_993BjE5aCgYIARAAGBASNwF-L9Irn9vB0BHtmCOOHbT8KX-vjIXlK6EaceCdwAY2CRzs23nlx-yK6i9K0rkVzXmcp0946Lw",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI1XzlOZFY5dFVBdkZGTE4za1BJdm9nIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg2NTk2LCJleHAiOjE3NDkzOTAxOTZ9.kFBfxPd-6iezAKgJuXEzmtwsULNMF-Aqs7ZQZmnfkznDFwS4vFITp0Fyp18bgP2FqOeGSPdXGyEotcRvBP_TptUbBbCkSIFv1mx91QUSP45XhPC0AaBh0mvGaIvQuINHv55cMlWxOL4GPFMFnY2C7tairNuak3ELBzr_3c9cADjxl_YncdUu0h5FO1_yI8wvTAPcxJPPblnPTYEz0ixDCbN7VTp8HNTN6E0S6CiKly50yzO8cbPHUCxqUCkd-dVTjZlgK2BmhWNqIW5-uVLKEQvVMoKMssrgvWHIf-uvUZG2cF2O164ITgDArbjl4cEh8GW8vTCRzPYAmk_FiaQGmg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxhxkiaBb5qL0neoJJkVR2n3VNSiGCqv605XLASX2iFnUDo-mii9BKOKgCYR3QMQuLwiJL7HBlq5yew2WjuR0aHMUkq2b06jm96hzVn2fwnEMumieRTGM9V9L5mudWgQRFiPXf7Jz6wNOIweDfYiFF6J8smwnfRqLyjEaCgYKAcUSARUSFQHGX2Min9Os97xQ7vTLxJRjPXPiGg0175', 'expires_in': 3599, 'refresh_token': '1//0g1p_993BjE5aCgYIARAAGBASNwF-L9Irn9vB0BHtmCOOHbT8KX-vjIXlK6EaceCdwAY2CRzs23nlx-yK6i9K0rkVzXmcp0946Lw', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI1XzlOZFY5dFVBdkZGTE4za1BJdm9nIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg2NTk2LCJleHAiOjE3NDkzOTAxOTZ9.kFBfxPd-6iezAKgJuXEzmtwsULNMF-Aqs7ZQZmnfkznDFwS4vFITp0Fyp18bgP2FqOeGSPdXGyEotcRvBP_TptUbBbCkSIFv1mx91QUSP45XhPC0AaBh0mvGaIvQuINHv55cMlWxOL4GPFMFnY2C7tairNuak3ELBzr_3c9cADjxl_YncdUu0h5FO1_yI8wvTAPcxJPPblnPTYEz0ixDCbN7VTp8HNTN6E0S6CiKly50yzO8cbPHUCxqUCkd-dVTjZlgK2BmhWNqIW5-uVLKEQvVMoKMssrgvWHIf-uvUZG2cF2O164ITgDArbjl4cEh8GW8vTCRzPYAmk_FiaQGmg', 'expires_at': 1749390195.3568053}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x70FzrAqfyZyDBx3KCIv4DVOWKJy9P7AwEEG6zCLWN-LOEUEL9IQD0GBznijXMYug', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50a63e0>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x70FzrAqfyZyDBx3KCIv4DVOWKJy9P7AwEEG6zCLWN-LOEUEL9IQD0GBznijXMYug&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 12:47:43 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxg_nUK4LLf8yAz8EcJgbeJDHkLlbzp5XVZd64v2jzuuLYgkRUsbzBax2zw1oQaHmg2fahpok9O3luibEAcwjrA4JGC9vfd8bmGr-aek2aXt_XoSqu2mdEwZq1RnkEKJz6-czHjCrPKDyySvXJ3e57nbsLcClWjzxR3iaCgYKAdMSARUSFQHGX2MiC5dblN1gjIr01PENc9P-yQ0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gJB9RvBVqCkqCgYIARAAGBASNwF-L9Ir4YJEFtk70dHU0eo-1AEEKySHYSfilgExR-pHuQf1yQaWq9tabzQ18_9aBqIRcCYAAcA",
+  "scope": "openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJZc1VoSTM3aXFCZVNIaWdLVjZfZFZRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg2ODYzLCJleHAiOjE3NDkzOTA0NjN9.PuBNTYf6i-TZsUrvreDy-uVqBIVIUrMve4QlMauXgGihkXDdBELo2H9ulZqJN2XMsoeezuxWLjfUn6G4VSFGyqO1GpNjwVtK-IBfG3xjfbFui97bqBJZ1pQqKAa9EjxnEJSa-GAiRUuFfm0Szz6M9NY4Vr-T6MvP4RSRxkQBwSXwoFilQ6OuqaNvO19sDwCExVjctvTHpKVf_DDi2z8vRtdFOHGPVCv0kvq9VYTiZlrcZ5kkA5VfqJFJJFmG3rY_K01yIvUAVjc2Cu95ruoP9_nJIMZA4qS5ooGz8ivEMz4cuwVaworYoSJ6RkSCLOlOiphygPdj0ziVKDEaivGIrg"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxg_nUK4LLf8yAz8EcJgbeJDHkLlbzp5XVZd64v2jzuuLYgkRUsbzBax2zw1oQaHmg2fahpok9O3luibEAcwjrA4JGC9vfd8bmGr-aek2aXt_XoSqu2mdEwZq1RnkEKJz6-czHjCrPKDyySvXJ3e57nbsLcClWjzxR3iaCgYKAdMSARUSFQHGX2MiC5dblN1gjIr01PENc9P-yQ0175', 'expires_in': 3599, 'refresh_token': '1//0gJB9RvBVqCkqCgYIARAAGBASNwF-L9Ir4YJEFtk70dHU0eo-1AEEKySHYSfilgExR-pHuQf1yQaWq9tabzQ18_9aBqIRcCYAAcA', 'scope': ['openid', 'https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJZc1VoSTM3aXFCZVNIaWdLVjZfZFZRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg2ODYzLCJleHAiOjE3NDkzOTA0NjN9.PuBNTYf6i-TZsUrvreDy-uVqBIVIUrMve4QlMauXgGihkXDdBELo2H9ulZqJN2XMsoeezuxWLjfUn6G4VSFGyqO1GpNjwVtK-IBfG3xjfbFui97bqBJZ1pQqKAa9EjxnEJSa-GAiRUuFfm0Szz6M9NY4Vr-T6MvP4RSRxkQBwSXwoFilQ6OuqaNvO19sDwCExVjctvTHpKVf_DDi2z8vRtdFOHGPVCv0kvq9VYTiZlrcZ5kkA5VfqJFJJFmG3rY_K01yIvUAVjc2Cu95ruoP9_nJIMZA4qS5ooGz8ivEMz4cuwVaworYoSJ6RkSCLOlOiphygPdj0ziVKDEaivGIrg', 'expires_at': 1749390463.0275161}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1571
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5__N6L9vky2NMNjy0BFuen64xvHMFwWpbtCKzuscrWZETqhZLXfXxG-eAbfoNQlg', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50c2590>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5__N6L9vky2NMNjy0BFuen64xvHMFwWpbtCKzuscrWZETqhZLXfXxG-eAbfoNQlg&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Sun, 08 Jun 2025 12:56:12 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4XtxiJQBSJ2mFSFEUwCE865W-4awEL59Z0phIdfvlSyujnJTJTL8aDvwMogSaBzR2Nc72p4orVVi0qJpf_9XCsBcCiex1NWo-Cl-Oi7_OEHbnjm8BOWWK359ZY5GC-UzssBnud4QrXwK1V5Q4szrCgbkUUKXSgYFKa4loiaCgYKAXISARUSFQHGX2Mi3jmHW_N0zaMBFdmFxsv9eA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0g7yAT1wGIweyCgYIARAAGBASNwF-L9IrWS1Hx4z7XA2SHpYN3G21XloCZYLCNktOi-5xzxk4WX-POYtTblWyl1_0LXshKP7Cfyg",
+  "scope": "https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiItdkVtVkxSNGNkUDhMM053cFNxOEN3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg3MzcyLCJleHAiOjE3NDkzOTA5NzJ9.p9_SckB8MEILYfBxn6H2zz4XBXYYvcNDj7l_v4nQ28oVEMc2i0KGYVRAubrEsvdEy7KIsHcn6eUCmkn-l7nRUPdB_P6yxsrajhkER0bj3pCdqJ_nTqzSaJtFePbsVI-eaGwQ2mn2mpUSuDMDB0vTf1dHnmI5SsXHKG0aAo2yf6rQoZX9u-HSH_SRBJr1L1hXmW6K0hQVWxnfSAG9Qcd9JTOSA420BprJoJlzvtOZsaUZm6qK8TlfTSNoDSQxXAr20Gfl89o99g5wpRrof4fArW6ipSGEsgL1olXniAojjYknhf36a0AfCXW9R8rTxOSjfvb5UegEJZ9zkA3wP9YUlw"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4XtxiJQBSJ2mFSFEUwCE865W-4awEL59Z0phIdfvlSyujnJTJTL8aDvwMogSaBzR2Nc72p4orVVi0qJpf_9XCsBcCiex1NWo-Cl-Oi7_OEHbnjm8BOWWK359ZY5GC-UzssBnud4QrXwK1V5Q4szrCgbkUUKXSgYFKa4loiaCgYKAXISARUSFQHGX2Mi3jmHW_N0zaMBFdmFxsv9eA0175', 'expires_in': 3599, 'refresh_token': '1//0g7yAT1wGIweyCgYIARAAGBASNwF-L9IrWS1Hx4z7XA2SHpYN3G21XloCZYLCNktOi-5xzxk4WX-POYtTblWyl1_0LXshKP7Cfyg', 'scope': ['https://www.googleapis.com/auth/userinfo.profile', 'openid', 'https://www.googleapis.com/auth/userinfo.email'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTUxODA1MDUxOTU5Mzk4OTgyNTEiLCJlbWFpbCI6InZpZGl0YWdhcndhbDAxMjNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiItdkVtVkxSNGNkUDhMM053cFNxOEN3IiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS3JWMGV4SjZQalgzU1ZnNS1JS2t0Y0NwTThlTjJtY3J1RTFnekV4TnNTS3RUR1dBPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IiwiZmFtaWx5X25hbWUiOiJBZ2Fyd2FsIiwiaWF0IjoxNzQ5Mzg3MzcyLCJleHAiOjE3NDkzOTA5NzJ9.p9_SckB8MEILYfBxn6H2zz4XBXYYvcNDj7l_v4nQ28oVEMc2i0KGYVRAubrEsvdEy7KIsHcn6eUCmkn-l7nRUPdB_P6yxsrajhkER0bj3pCdqJ_nTqzSaJtFePbsVI-eaGwQ2mn2mpUSuDMDB0vTf1dHnmI5SsXHKG0aAo2yf6rQoZX9u-HSH_SRBJr1L1hXmW6K0hQVWxnfSAG9Qcd9JTOSA420BprJoJlzvtOZsaUZm6qK8TlfTSNoDSQxXAr20Gfl89o99g5wpRrof4fArW6ipSGEsgL1olXniAojjYknhf36a0AfCXW9R8rTxOSjfvb5UegEJZ9zkA3wP9YUlw', 'expires_at': 1749390971.4923139}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Encoding `client_id` "985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com" with `client_secret` as Basic auth credentials.
+Requesting url https://oauth2.googleapis.com/token using method POST.
+Supplying headers {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'} and data {'grant_type': 'authorization_code', 'code': '4/0AUJR-x5IvFdVNph9ODrgDy-AMnE7A-2ZfoDbNhFVnGwCCIYyHfcKVnUZ6ffkdGJisV0VsQ', 'redirect_uri': 'http://localhost:5173'}
+Passing through key word arguments {'timeout': None, 'auth': <requests.auth.HTTPBasicAuth object at 0x790ee50a7a60>, 'verify': None, 'proxies': None, 'cert': None}.
+Starting new HTTPS connection (1): oauth2.googleapis.com:443
+https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+Request to fetch token completed with status 200.
+Request url was https://oauth2.googleapis.com/token
+Request headers were {'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '153', 'Authorization': 'Basic OTg1NzU1NTk3MjI1LWo5cGN1Y2NoZzVlazJlNWxsNnEybnV1dGpnNWNmaDFlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tOkdPQ1NQWC1ZRDJpLVBobEtIeDNiYW1NenpqNzJSQWYyWlZN'}
+Request body was grant_type=authorization_code&code=4%2F0AUJR-x5IvFdVNph9ODrgDy-AMnE7A-2ZfoDbNhFVnGwCCIYyHfcKVnUZ6ffkdGJisV0VsQ&redirect_uri=http%3A%2F%2Flocalhost%3A5173
+Response headers were {'Date': 'Sun, 08 Jun 2025 12:56:42 GMT', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Alt-Svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'Transfer-Encoding': 'chunked'} and content {
+  "access_token": "ya29.a0AW4Xtxim7xTDxTFIPXHMxICac7_9qC2Be62K2oTVdoUFoV9UEmMVnMkT7NCbKpc_uXjA11063oP6SUlZs0R3QCoEr9r9NYlhcuuvFOkHmNK4T4uSrYhF02cMueR1zi1v5XGuoVuPlM9fk0FBRvafryZ5ROG4iS-X1Nh7rMY1aCgYKAfgSARESFQHGX2MipTFG_gSNOLkz5fYJwpWKpA0175",
+  "expires_in": 3599,
+  "refresh_token": "1//0gFVprdPcD6NXCgYIARAAGBASNwF-L9Irb1vqq9jQiJl1M9k2q4mcT-Llioj83mmWGsd8kDoyfjP-l56IETkkJ3wKinjEqhhWifI",
+  "scope": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+  "token_type": "Bearer",
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIwcFEyaVJNcjIyRFVXMnhyVUJ5U3VRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg3NDAyLCJleHAiOjE3NDkzOTEwMDJ9.MDtk-NeZz5dMAy1qycbAzFZ_2ztdXwaZvT7CkAnpP2U_uTvirPjMUqX50Gs_udCzhC6osiD5pPcPm4xqxKoFBdiENhyS0Vco7hSp322K_AqQ9GQmCSenDZkBiPPqTQK97EE0OJWgnjEY0erVSh9t_KUrFa-OjWxqT9L5EGB3gw7Ssu-fubYNI9UhSFaSdvNRmYu7fXxvUWUmP-iyEagZ2cRmVyfqrkzLzeSg3OFNiBX4ZesE4P6S--Q7Oa3D_Zf1TOoaJaIYJIrUTePUVPlZsu7JUvgvCFIajG0tjUaJkGmICF_Og9i172KzzE6_iN1YTyccivQebX5F-ivVyJ68ZA"
+}.
+Invoking 0 token response hooks.
+Obtained token {'access_token': 'ya29.a0AW4Xtxim7xTDxTFIPXHMxICac7_9qC2Be62K2oTVdoUFoV9UEmMVnMkT7NCbKpc_uXjA11063oP6SUlZs0R3QCoEr9r9NYlhcuuvFOkHmNK4T4uSrYhF02cMueR1zi1v5XGuoVuPlM9fk0FBRvafryZ5ROG4iS-X1Nh7rMY1aCgYKAfgSARESFQHGX2MipTFG_gSNOLkz5fYJwpWKpA0175', 'expires_in': 3599, 'refresh_token': '1//0gFVprdPcD6NXCgYIARAAGBASNwF-L9Irb1vqq9jQiJl1M9k2q4mcT-Llioj83mmWGsd8kDoyfjP-l56IETkkJ3wKinjEqhhWifI', 'scope': ['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile', 'openid'], 'token_type': 'Bearer', 'id_token': 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiNDM0Njk1OTQ0NTE4MjAxNDhiMzM5YzU4OGFlZGUzMDUxMDM5MTkiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5ODU3NTU1OTcyMjUtajlwY3VjY2hnNWVrMmU1bGw2cTJudXV0amc1Y2ZoMWUuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDc4MTM2MDI4NjU2NDM1MDI4NTUiLCJoZCI6Iml0Ymh1LmFjLmluIiwiZW1haWwiOiJ2aWRpdC5hZ2Fyd2FsLmVlZTI0QGl0Ymh1LmFjLmluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIwcFEyaVJNcjIyRFVXMnhyVUJ5U3VRIiwibmFtZSI6IlZpZGl0IEFnYXJ3YWwgNC1ZciBCLlRlY2guOiBFbGVjdHJpY2FsIEVuZ2cuLElJVChCSFUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSlhpak9rUGtKcGNHOTcwM09JSlppeDRPbFVLcWtidjV4Yl9mTFZDVERnMnNZZ2JRPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IlZpZGl0IEFnYXJ3YWwiLCJmYW1pbHlfbmFtZSI6IjQtWXIgQi5UZWNoLjogRWxlY3RyaWNhbCBFbmdnLixJSVQoQkhVIiwiaWF0IjoxNzQ5Mzg3NDAyLCJleHAiOjE3NDkzOTEwMDJ9.MDtk-NeZz5dMAy1qycbAzFZ_2ztdXwaZvT7CkAnpP2U_uTvirPjMUqX50Gs_udCzhC6osiD5pPcPm4xqxKoFBdiENhyS0Vco7hSp322K_AqQ9GQmCSenDZkBiPPqTQK97EE0OJWgnjEY0erVSh9t_KUrFa-OjWxqT9L5EGB3gw7Ssu-fubYNI9UhSFaSdvNRmYu7fXxvUWUmP-iyEagZ2cRmVyfqrkzLzeSg3OFNiBX4ZesE4P6S--Q7Oa3D_Zf1TOoaJaIYJIrUTePUVPlZsu7JUvgvCFIajG0tjUaJkGmICF_Og9i172KzzE6_iN1YTyccivQebX5F-ivVyJ68ZA', 'expires_at': 1749391001.4709682}.
+Starting new HTTPS connection (1): www.googleapis.com:443
+https://www.googleapis.com:443 "GET /oauth2/v1/certs HTTP/1.1" 200 1570
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+Unauthorized: /api/snippets/
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/vidit/Desktop/week3/CSOC_week3/backend/snippethub/snippets/admin.py changed, reloading.
+Watching for file changes with StatReloader

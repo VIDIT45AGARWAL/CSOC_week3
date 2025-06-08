@@ -12,7 +12,7 @@ const SnippetEdit = () => {
 
     const [formData, setFormData] = useState({
             title: '',
-            content_type: 'CODE',
+            category: 'CODE',
             content: '',
             link_url: '',
             link_title: '',
@@ -26,7 +26,7 @@ const SnippetEdit = () => {
     useEffect(()=>{
         setFormData({
             title: state.snippet.title,
-            content_type: state.snippet.content_type,
+            category: state.snippet.category,
             content: state.snippet.content,
             link_url: state.snippet.link_url,
             link_title: state.snippet.link_title,
@@ -59,19 +59,19 @@ const SnippetEdit = () => {
             toast.error('Title is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'CODE' && !formData.content) {
+        if (formData.category === 'CODE' && !formData.content) {
             toast.error('Code content is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'LINKS' && (!formData.link_url || !formData.link_title)) {
+        if (formData.category === 'LINKS' && (!formData.link_url || !formData.link_title)) {
             toast.error('Link URL and title are required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'NOTES' && !formData.content) {
+        if (formData.category === 'NOTES' && !formData.content) {
             toast.error('Note content is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'FILES' && !formData.file && !state.snippet.file) {
+        if (formData.category === 'FILES' && !formData.file && !state.snippet.file) {
             toast.error('File is required', { theme: 'colored' });
             return;
         }
@@ -79,7 +79,7 @@ const SnippetEdit = () => {
         setIsSubmitting(true)
         const data = new FormData();
         data.append('title', formData.title);
-        data.append('content_type', formData.content_type);
+        data.append('category', formData.category);
         if (formData.content) data.append('content', formData.content);
         if (formData.link_url) data.append('link_url', formData.link_url);
         if (formData.link_title) data.append('link_title', formData.link_title);
@@ -87,27 +87,28 @@ const SnippetEdit = () => {
         if (formData.file) data.append('file', formData.file);
         data.append('is_starred', formData.is_starred);
 
-        try{
-            const categoryResponse= await axios.get(`${API_URL}/categories/`, {
-                params: { content_type: formData.content_type}
-            })
-            data.append('category', categoryResponse.data[0].id)
-
-            const response= await axios.patch(`${API_URL}/snippets/${state.snippet.id}/`, data, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            })
-            toast.success('Snippet has been edited', {theme: 'colored'})
-            setTimeout(()=> navigate('/snippet-view', {state: {snippet: response.data}}))
-        } catch(error){
-            console.error('Edit snippet error: ', error)
-            toast.error('Failed to edit snippet')
-        } finally{
-            setIsSubmitting(false)
+        try {
+        const response = await axios.patch(`${API_URL}/snippets/${state.snippet.id}/`, data, {
+            headers: {
+            'Content-Type': 'multipart/form-data',
+            Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+            },
+        });
+        toast.success('Snippet has been edited', { theme: 'colored' });
+        setTimeout(() => navigate('/snippet-view', { state: { snippet: response.data } }));
+        } catch (error) {
+        console.error('Edit snippet error: ', error);
+        const errorMessage = error.response?.data?.category
+            ? error.response.data.category.join(', ')
+            : 'Failed to edit snippet';
+        toast.error(errorMessage, { theme: 'colored' });
+        } finally {
+        setIsSubmitting(false);
         }
     }
 
     const InputRender = () =>{
-        if(formData.content_type==='CODE'){
+        if(formData.category==='CODE'){
             return(
                 <div className='px-6'>
                     <label className='font-bold mr-4' htmlFor="language">Choose Language:</label>
@@ -121,7 +122,7 @@ const SnippetEdit = () => {
                 </div>    
             )
         }
-        else if(formData.content_type==='LINKS'){
+        else if(formData.category==='LINKS'){
             return(
                 <>
                     <input className='mt-2 mx-6 p-3 sm:w-135 md:w-175 border-2 border-gray-500 rounded-lg' name='link_url' type="url" value={formData.link_url} onChange={handleChange} placeholder='https://example.com'/> <br />
@@ -129,7 +130,7 @@ const SnippetEdit = () => {
                 </>
             )
         }
-        else if(formData.content_type==='NOTES'){
+        else if(formData.category==='NOTES'){
             return(
                 <>
                 <textarea value={formData.content} onChange={handleChange} className='mx-6 md:w-175 p-2 border-2 h-40 border-gray-500 rounded-lg' name="content" placeholder='Enter snippet content'></textarea>
@@ -137,7 +138,7 @@ const SnippetEdit = () => {
             )
         }
 
-        else if(formData.content_type==='FILES'){
+        else if(formData.category==='FILES'){
             return(
                 <>
                     <div className='px-6'>
@@ -169,7 +170,7 @@ const SnippetEdit = () => {
 
              <div>
                 <label className='font-bold text-xl px-6' htmlFor="category">Snippet's Category</label> <br /> 
-                <select className='mx-6 p-3 border-2 border-gray-500 w-69 sm:w-135 md:w-175 rounded-lg' name="content_type" id="content_type" value={formData.content_type} onChange={handleChange}>
+                <select className='mx-6 p-3 border-2 border-gray-500 w-69 sm:w-135 md:w-175 rounded-lg' name="category" id="category" value={formData.category} onChange={handleChange}>
                     <option value="CODE">Code</option>
                     <option value="LINKS">Links</option>
                     <option value="NOTES">Notes</option>

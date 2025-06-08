@@ -7,11 +7,13 @@ import SideBar from '../components/sideBar'
 import List from './List'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { useAuth } from './AuthContext'
   
 const CardContainer = () => {
 
+  const {user}= useAuth()
+
   const [snippets, setSnippets] = useState([])
-  const [categories, setCategories] =useState([])
   const [filterCategory, setFilterCategory] =useState('All')
   const [search, setSearch]=useState('')
 
@@ -21,35 +23,40 @@ const CardContainer = () => {
   const API_URL= 'http://localhost:8000/api'
 
   const fetchSnippets = async ()=>{
+    if(!user) return
     setIsLoading(true)
-    try{
-      const response = await axios.get(`${API_URL}/snippets/`)
-      setSnippets(response.data)
-    } catch(error){
-      console.error('Error fetching snippets: ', error)
-      toast.error('Cant Load Snippets' , {theme: 'colored'})
-    } finally{
-      setIsLoading(false)
-    }
-  }
-
-  const fetchCategories = async () => {
     try {
-      const response = await axios.get(`${API_URL}/categories/`)
-      setCategories(response.data)
+      const response = await axios.get(`${API_URL}/snippets/`, {
+        headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` },
+      })
+      setSnippets(response.data)
     } catch (error) {
-      console.error('Error fetching categories:', error)
+      console.error('Error fetching snippets: ', error)
+      toast.error('Cant Load Snippets', { theme: 'colored' })
+    } finally {
+      setIsLoading(false)
     }
   }
 
   useEffect(()=>{
     fetchSnippets()
-    fetchCategories()
-  },[])
+  },[user])
 
   useEffect(() => {
     localStorage.setItem('snippetView', view)
   }, [view])
+
+  useEffect(()=>{
+    const handleStarToggle = (event) => {
+      const updatedSnippet = event.detail
+      setSnippets((prev) =>
+        prev.map((s) => (s.id === updatedSnippet.id ? updatedSnippet : s))
+      )
+    }
+
+    window.addEventListener('snippetStarToggled', handleStarToggle)
+    return () => window.removeEventListener('snippetStarToggled', handleStarToggle)
+  },[])
 
   const toggleView = ()=>{
     if(view==='grid'){
@@ -72,7 +79,7 @@ const CardContainer = () => {
       filteredSnippets = snippets
     }
     else{
-      filteredSnippets=snippets.filter((snippet)=> snippet.content_type === filterCategory)
+      filteredSnippets=snippets.filter((snippet)=> snippet.category === filterCategory)
     }
   }
 
@@ -107,7 +114,7 @@ const CardContainer = () => {
       <div className='flex flex-col sm:flex-row'>
         <SideBar/>
         <div className='bg-gray-300 flex flex-col sm:w-[calc(100vw-330px)]' style={{height: 'calc(100vh - 100px)'}}>
-            <Filter onFilterChange={setFilterCategory} selectedCategory={filterCategory} view={view} toggleView={toggleView} categories={['All',...categories.map(cat=> cat.content_type)]}/>
+            <Filter onFilterChange={setFilterCategory} selectedCategory={filterCategory} view={view} toggleView={toggleView}/>
             <div className='bg-gray-300 p-8 overflow-y-auto' style={{height:'calc(100vh-100px)', width:'calc(100vw-330px)'}}>      
                 {renderSnippets()}
             </div>

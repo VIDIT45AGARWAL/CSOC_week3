@@ -8,32 +8,32 @@ const Card = ({snippet, onUpdate}) => {
 
   const handleStarToggle= async (e)=>{
     e.preventDefault()
-    try{
-      const response= await axios.patch(`${API_URL}/snippets/${snippet.id}/`,{
-        is_starred: !snippet.is_starred
-      })
-      if(onUpdate){
+    try {
+      const response = await axios.patch(
+        `${API_URL}/snippets/${snippet.id}/`,
+        { is_starred: !snippet.is_starred },
+        { headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` } }
+      )
+      if (onUpdate) {
         onUpdate(response.data)
       }
-      window.dispatchEvent(
-        new CustomEvent('snippetStarToggled', { detail: response.data })
-      );
-    } catch(error){
+      window.dispatchEvent(new CustomEvent('snippetStarToggled', { detail: response.data }))
+    } catch (error) {
       console.error('Error updating star status:', error)
     }
   }
 
   const renderIcon = () =>{
-    if(snippet.content_type==='CODE'){
+    if(snippet.category==='CODE'){
       return(<i className='bx bx-code mr-1 text-blue-600'></i>)
     }
-    else if(snippet.content_type==='LINKS'){
+    else if(snippet.category==='LINKS'){
       return(<i className='bx bx-link mr-1 text-violet-600'></i>)
     }
-    else if(snippet.content_type==='NOTES'){
+    else if(snippet.category==='NOTES'){
       return(<i className='bx bxs-edit-alt mr-1 text-green-600'></i>)
     }
-    else if(snippet.content_type==='FILES'){
+    else if(snippet.category==='FILES'){
       return(<i className='bx bx-file-blank text-pink-600' ></i>)
     }
   }
@@ -48,16 +48,16 @@ const Card = ({snippet, onUpdate}) => {
   }
 
   const chooseColor=()=>{
-    if(snippet.content_type==='NOTES'){
+    if(snippet.category==='NOTES'){
       return `green-600`
     }
-    else if(snippet.content_type==='LINKS'){
+    else if(snippet.category==='LINKS'){
       return `violet-600`
     }
-    else if(snippet.content_type==='CODE'){
+    else if(snippet.category==='CODE'){
       return `blue-600`
     }
-    else if(snippet.content_type==='FILES'){
+    else if(snippet.category==='FILES'){
       return `pink-600`
     }
   }
@@ -81,7 +81,7 @@ const Card = ({snippet, onUpdate}) => {
       <br />
       <h2 className={`text-${chooseColor()} absolute bottom-3 left-3`}>
         {renderIcon()}
-        {snippet.content_type.charAt(0) + snippet.content_type.slice(1).toLowerCase()}
+        {snippet.category.charAt(0) + snippet.category.slice(1).toLowerCase()}
       </h2>
     </div> 
   )

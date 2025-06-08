@@ -1,20 +1,17 @@
 from rest_framework import serializers
-from .models import Category, Snippet
+from .models import Snippet
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ['id', 'content_type']
 
 class SnippetSerializer(serializers.ModelSerializer):
-    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), required=True)
+    category = serializers.ChoiceField(choices=Snippet.CATEGORY_CHOICES, required=True)
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = Snippet
         fields = [
-            'id', 'title', 'content', 'content_type', 'language',
+            'id', 'title', 'content', 'category', 'language',
             'link_title', 'link_url', 'file', 'date',
-            'category', 'is_public', 'is_starred'
+            'is_public', 'is_starred', 'user',
         ]
 
     def validate_file(self, value):

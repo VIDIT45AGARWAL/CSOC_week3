@@ -27,21 +27,23 @@ const SnippetView = () => {
 
 
     const handleDelete = async () =>{
-        try{
-            await axios.delete(`${API_URL}/snippets/${snippet.id}/`)
-            toast.success('Snippet has been deleted', {theme: 'colored'})
-            setTimeout(()=> navigate('/'), 100)
-        } catch(error){
-            console.error('Delete error: ', error)
-            toast.error('Failed to delete snippet', {theme:'colored'})
+        try {
+        await axios.delete(`${API_URL}/snippets/${snippet.id}/`, {
+            headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` },
+        });
+        toast.success('Snippet has been deleted', { theme: 'colored' });
+        setTimeout(() => navigate('/home'), 100);
+        } catch (error) {
+        console.error('Delete error: ', error);
+        toast.error('Failed to delete snippet', { theme: 'colored' });
         }
     }
 
     const handleCopy = async () => {
         try {
-        if (snippet.content_type === 'LINKS') {
+        if (snippet.category === 'LINKS') {
             await navigator.clipboard.writeText(snippet.link_url)
-        } else if (snippet.content_type === 'FILES') {
+        } else if (snippet.category === 'FILES') {
             await navigator.clipboard.writeText(snippet.file)
         } else {
             await navigator.clipboard.writeText(snippet.content || '')
@@ -54,7 +56,7 @@ const SnippetView = () => {
   }
 
     const bodyContent = () =>{
-        if(snippet.content_type==='CODE'){
+        if(snippet.category==='CODE'){
             return(
                 <>
                     <pre className='overflow-x-auto shadow-2xl rounded-2xl  sm:w-[calc(100vw-29rem)]'>
@@ -65,7 +67,7 @@ const SnippetView = () => {
                 </>
             )
         }
-        else if(snippet.content_type==='LINKS'){
+        else if(snippet.category==='LINKS'){
             return(
                 <>
                     <div className='text-2xl font-bold italic text-center'>
@@ -75,7 +77,7 @@ const SnippetView = () => {
                 </>
             )
         }
-        else if(snippet.content_type==='NOTES'){
+        else if(snippet.category==='NOTES'){
             return(
                 <>
                     <div>
@@ -86,7 +88,7 @@ const SnippetView = () => {
                 </>
             )
         }
-        else if(snippet.content_type==='FILES'){
+        else if(snippet.category==='FILES'){
             return(
                 <div className="p-4">
                     <p className="text-lg">
@@ -113,7 +115,7 @@ const SnippetView = () => {
             <div className='bg-gray-300 flex flex-row sm:w-[calc(100vw-330px)]' style={{height: 'calc(100vh - 100px)'}}>
                 <div className='bg-white m-10 rounded-2xl shadow-2xl relative' style={{width: 'calc(100vw - 5rem)'}}>
                     <h1 className='py-6 font-bold text-3xl text-center'>{snippet.title}</h1>
-                    <Link to="/">
+                    <Link to="/home">
                         <i className='bx bx-arrow-back top-6 left-2 absolute text-4xl pl-2' style={{color:'#0b70ef'}} ></i>
                     </Link>
                     <button className='absolute right-8 top-7 text-3xl cursor-pointer' onClick={handleCopy}>

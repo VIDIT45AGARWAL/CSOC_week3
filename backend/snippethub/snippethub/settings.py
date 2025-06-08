@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+GOOGLE_CLIENT_ID= '985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET = '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'
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 # Application definition
 
@@ -40,6 +44,7 @@ INSTALLED_APPS = [
     'snippets',
     'rest_framework',
     'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -57,10 +62,43 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
 
 CORS_ALLOWED_ORIGINS=[
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'http://127.0.0.1:8000',
+]
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:5173',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
 ROOT_URLCONF = 'snippethub.urls'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 TEMPLATES = [
     {

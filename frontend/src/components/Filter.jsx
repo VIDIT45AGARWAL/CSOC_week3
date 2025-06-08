@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Filter = ({onFilterChange, selectedCategory, view, toggleView, categories}) => {
+const Filter = ({onFilterChange, selectedCategory, view, toggleView}) => {
 
   const handleChange =(e)=>{
     const category=e.target.value

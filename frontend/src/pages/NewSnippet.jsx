@@ -8,7 +8,7 @@ const NewSnippet = () => {
 
     const [formData, setFormData] = useState({
         title: '',
-        content_type: 'CODE',
+        category: 'CODE',
         content: '',
         link_url: '',
         link_title: '',
@@ -46,19 +46,19 @@ const NewSnippet = () => {
             toast.error('Title is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'CODE' && !formData.content) {
+        if (formData.category === 'CODE' && !formData.content) {
             toast.error('Code content is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'LINKS' && (!formData.link_url || !formData.link_title)) {
+        if (formData.category === 'LINKS' && (!formData.link_url || !formData.link_title)) {
             toast.error('Link URL and title are required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'NOTES' && !formData.content) {
+        if (formData.category === 'NOTES' && !formData.content) {
             toast.error('Note content is required', { theme: 'colored' });
             return;
         }
-        if (formData.content_type === 'FILES' && !formData.file) {
+        if (formData.category === 'FILES' && !formData.file) {
             toast.error('File is required', { theme: 'colored' });
             return;
         }
@@ -66,7 +66,7 @@ const NewSnippet = () => {
         setIsSubmitting(true)
         const data = new FormData();
         data.append('title', formData.title);
-        data.append('content_type', formData.content_type);
+        data.append('category', formData.category);
         if (formData.content) data.append('content', formData.content);
         if (formData.link_url) data.append('link_url', formData.link_url);
         if (formData.link_title) data.append('link_title', formData.link_title);
@@ -74,42 +74,38 @@ const NewSnippet = () => {
         if (formData.file) data.append('file', formData.file);
         data.append('is_starred', formData.is_starred);
 
-        try{
-        const categoryResponse = await axios.get(`${API_URL}/categories/`, {
-            params: { content_type: formData.content_type },
-        });
-        if(categoryResponse.data.length === 0) {
-            toast.error('Category not found', { theme: 'colored' });
+        try {
+            const response = await axios.post(`${API_URL}/snippets/`, data, {
+                headers: {
+                'Content-Type': 'multipart/form-data',
+                Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+                },
+            });
+            toast.success('A new snippet has been created', { theme: 'colored' });
+            setFormData({
+                title: '',
+                category: 'CODE',
+                content: '',
+                link_url: '',
+                link_title: '',
+                language: 'c',
+                file: null,
+                is_starred: false,
+            });
+            setTimeout(() => navigate('/home'), 100);
+            } catch (error) {
+            console.error('Create snippet error: ', error);
+            const errorMessage = error.response?.data?.category
+                ? error.response.data.category.join(', ')
+                : 'Failed to create snippet';
+            toast.error(errorMessage, { theme: 'colored' });
+            } finally {
             setIsSubmitting(false);
-            return;
-        }
-        data.append('category', categoryResponse.data[0].id)
-
-        const response = await axios.post(`${API_URL}/snippets/`, data, {
-            headers: {'Content-Type': 'multipart/form-data'}
-        })
-        toast.success('A new snippet has been created', { theme: 'colored'})
-        setFormData({
-            title: '',
-            content_type: 'CODE',
-            content: '',
-            link_url: '',
-            link_title: '',
-            language: 'c',
-            file: null,
-            is_starred: false,
-         });
-         setTimeout(()=> navigate('/'),100)
-    } catch(error){
-        console.error('Create snippet error: ', error)
-        toast.error(`Failed to create snippet: ${errorMessage}`, { theme: 'colored' })
-    } finally{
-        setIsSubmitting(false)
-    }
-    }
+            }
+  };
 
     const InputRender = () =>{
-        if(formData.content_type==='CODE'){
+        if(formData.category==='CODE'){
             return(
                 <div className='px-6'>
                     <label className='font-bold mr-4' htmlFor="language">Choose Language:</label>
@@ -123,7 +119,7 @@ const NewSnippet = () => {
                 </div>    
             )
         }
-        else if(formData.content_type==='LINKS'){
+        else if(formData.category==='LINKS'){
             return(
                 <>
                     <input className='mt-2 mx-6 p-3 sm:w-135 md:w-175 border-2 border-gray-500 rounded-lg' name='link_url' type="url" value={formData.link_url} onChange={handleChange} placeholder='https://example.com'/> <br />
@@ -131,14 +127,14 @@ const NewSnippet = () => {
                 </>
             )
         }
-        else if(formData.content_type==='NOTES'){
+        else if(formData.category==='NOTES'){
             return(
                 <>
                 <textarea value={formData.content} onChange={handleChange} className='mx-6 w-68 sm:w-135 md:w-175 p-2 border-2 h-40 border-gray-500 rounded-lg' name="content" placeholder='Enter snippet content'></textarea>
                 </>
             )
         }
-        else if(formData.content_type==='FILES'){
+        else if(formData.category==='FILES'){
             return(
                 <div className="px-6">
                     <input className="mt-2" name="file" type="file" onChange={handleChange} accept=".pdf,.jpg,.jpeg,.png"/>
@@ -162,7 +158,7 @@ const NewSnippet = () => {
 
              <div>
                 <label className='font-bold text-xl px-6' htmlFor="category">Snippet's Category</label> <br /> 
-                <select className='mx-6 p-3 border-2 border-gray-500 w-69 sm:w-135 md:w-175 rounded-lg' name="content_type" id="category" value={formData.content_type} onChange={handleChange}>
+                <select className='mx-6 p-3 border-2 border-gray-500 w-69 sm:w-135 md:w-175 rounded-lg' name="category" id="category" value={formData.category} onChange={handleChange}>
                     <option value="CODE">Code</option>
                     <option value="LINKS">Links</option>
                     <option value="NOTES">Notes</option>

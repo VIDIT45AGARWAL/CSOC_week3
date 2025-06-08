@@ -8,21 +8,31 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import HomePage from './pages/HomePage'
 import Layout from  './Layout/layout'
 import SnippetEdit from './pages/SnippetEdit'
+import { AuthProvider } from './components/AuthContext'
+import { GoogleOAuthProvider } from '@react-oauth/google'
+import Login from './pages/login'
 
 const App = () => {
 
   const router= createBrowserRouter(createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
-      <Route index element={<HomePage/>} />
-      <Route path='/add-snippet' element={<NewSnippet/>} />
-      <Route path='/snippet-view' element={<SnippetView/>}/>
-      <Route path='/snippet-edit' element={<SnippetEdit/>}/>
+  <>
+    <Route path='/' element={<Login/>}/>
+    <Route element={<Layout/>}>
+        <Route path='/home' element={<HomePage/>}/>
+        <Route path='/add-snippet' element={<NewSnippet/>}/>
+        <Route path='/snippet-view' element={<SnippetView/>}/>
+        <Route path='/snippet-edit' element={<SnippetEdit/>}/>
     </Route>
+  </>
   ))
 
 
   return (
+  <GoogleOAuthProvider clientId="985755597225-j9pcucchg5ek2e5ll6q2nuutjg5cfh1e.apps.googleusercontent.com">
+    <AuthProvider>
       <RouterProvider router={router}/>
+    </AuthProvider>
+  </GoogleOAuthProvider>
   )
 }
 

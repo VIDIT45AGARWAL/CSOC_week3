@@ -19,7 +19,7 @@ const NewSnippet = () => {
     const [isSubmitting, setIsSubmitting] =useState(false)
 
     const navigate =useNavigate()
-    const API_URL= 'http://localhost:8000/api'
+    const API_URL= import.meta.env.VITE_API_URL
 
     const handleChange = (e) =>{
         const {name, value, type, checked, files} = e.target

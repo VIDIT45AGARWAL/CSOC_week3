@@ -7,7 +7,7 @@ const sideBar = () => {
 
   const [starredSnippets, setStarredSnippets] =useState([])
   const {user}= useAuth()
-  const API_URL= 'http://localhost:8000/api'
+  const API_URL= import.meta.env.VITE_API_URL
 
   const fetchStarredSnippets = async ()=>{
     if(!user) return
